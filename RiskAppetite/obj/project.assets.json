@@ -13725,19 +13725,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Addis\\.nuget\\packages\\": {}
+    "C:\\Users\\addisgashaw\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Addis\\Desktop\\asp.net_core\\RiskAppetite\\RiskAppetite\\RiskAppetite.csproj",
+      "projectUniqueName": "C:\\Users\\addisgashaw\\Desktop\\RiskAppetite\\RiskAppetite\\RiskAppetite.csproj",
       "projectName": "RiskAppetite",
-      "projectPath": "C:\\Users\\Addis\\Desktop\\asp.net_core\\RiskAppetite\\RiskAppetite\\RiskAppetite.csproj",
-      "packagesPath": "C:\\Users\\Addis\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Addis\\Desktop\\asp.net_core\\RiskAppetite\\RiskAppetite\\obj\\",
+      "projectPath": "C:\\Users\\addisgashaw\\Desktop\\RiskAppetite\\RiskAppetite\\RiskAppetite.csproj",
+      "packagesPath": "C:\\Users\\addisgashaw\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\addisgashaw\\Desktop\\RiskAppetite\\RiskAppetite\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Addis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\addisgashaw\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

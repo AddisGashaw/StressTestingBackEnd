@@ -6,6 +6,7 @@ using OfficeOpenXml;
 using RiskAppetite.Models;
 using RiskAppetite.Services.ExcelUpload;
 using RiskAppetite.Services.RoleAssignation;
+using RiskAppetite.Services.UserProfileService;
 
 var builder = WebApplication.CreateBuilder(args);
 //lets tell about the connection string that we have created in appsetting.json
@@ -19,6 +20,8 @@ builder.Services.AddAutoMapper(typeof(MapperConfig));
 // Add services to the container.
 builder.Services.AddScoped<IRoleAssignation, RoleAssignation>();
 builder.Services.AddScoped<IExcelUpload, ExcelUpload>();
+builder.Services.AddScoped<IUserProfile, UserProfileSer>();
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
