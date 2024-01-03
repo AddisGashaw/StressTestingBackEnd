@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace RiskAppetite.Models;
 
-public partial class Credit
+public partial class Apcredit
 {
     public int Id { get; set; }
 

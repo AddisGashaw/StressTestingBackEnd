@@ -45,46 +45,53 @@ public class AuthController : ControllerBase
                 // Attempt to bind with the provided credentials
                 using (var searcher = new DirectorySearcher(entry))
                 {
-                    searcher.Filter = $"(&(objectClass=user)(mailnickname={username}))";
-                    searcher.PropertiesToLoad.AddRange(new[] { "displayName", "name", "givenname", "memberof", "mailnickname", "mail", "employeeID","department","title" });
-
-                    var result = searcher.FindOne();
-
-                    if (result != null)
+                    if (searcher!=null)
                     {
-                        var displayName = result.Properties["displayName"][0].ToString();
-                        var email = result.Properties["mail"][0].ToString();
-                        var employeeId = result.Properties["employeeID"][0].ToString();
-                        var department = result.Properties["department"][0].ToString();
-                        var title = result.Properties["title"][0].ToString();
-                        var name = result.Properties["name"][0].ToString();
-                        var givenname = result.Properties["givenname"][0].ToString();
-                        var memberof = result.Properties["memberof"][0].ToString();
-                        var mailnickname = result.Properties["mailnickname"][0].ToString();
+                        searcher.Filter = $"(&(objectClass=user)(mailnickname={username}))";
+                        searcher.PropertiesToLoad.AddRange(new[] { "displayName", "name", "givenname", "memberof", "mailnickname", "mail", "employeeID", "department", "title" });
 
-                        if (_context.UserProfiles.Any(u => u.EmployeeId == employeeId || u.UserEmail == email))
+                        var result = searcher.FindOne();
+
+                        if (result != null)
                         {
-                            var role= _context.UserProfiles.Where(u => u.EmployeeId == employeeId || u.UserEmail == email).Select(u=>u.UserRoleId).FirstOrDefault().ToString();
-                            var token = GenerateJwtToken(displayName, employeeId, department,email,name, mailnickname,role);
+                            var displayName = result.Properties["displayName"][0].ToString();
+                            var email = result.Properties["mail"][0].ToString();
+                            var employeeId = result.Properties["employeeID"][0].ToString();
+                            var department = result.Properties["department"][0].ToString();
+                            var title = result.Properties["title"][0].ToString();
+                            var name = result.Properties["name"][0].ToString();
+                            var givenname = result.Properties["givenname"][0].ToString();
+                            var memberof = result.Properties["memberof"][0].ToString();
+                            var mailnickname = result.Properties["mailnickname"][0].ToString();
 
-                            return Ok(new { token = token, displayName = displayName});
+                            if (_context.UserProfiles.Any(u => u.EmployeeId == employeeId || u.UserEmail == email))
+                            {
+                                var role = _context.UserProfiles.Where(u => u.EmployeeId == employeeId || u.UserEmail == email).Select(u => u.UserRoleId).FirstOrDefault().ToString();
+                                var token = GenerateJwtToken(displayName, employeeId, department, email, name, mailnickname, role);
 
-                            //return Ok($"Authenticated successfully\nDisplay Name: {displayName}\nEmail: {email}\nEmployee ID: {employeeId}\nTitle: {title}\nDepartment: {department}\nname: {name}\ngivenname: {givenname}\nmemberof: {memberof}\nmailnickname: {mailnickname}\nToken: {token}");
+                                return Ok(new { token = token, displayName = displayName });
+
+                                //return Ok($"Authenticated successfully\nDisplay Name: {displayName}\nEmail: {email}\nEmployee ID: {employeeId}\nTitle: {title}\nDepartment: {department}\nname: {name}\ngivenname: {givenname}\nmemberof: {memberof}\nmailnickname: {mailnickname}\nToken: {token}");
+                            }
+                            return NotFound("You have not the access to this system, please contact addisgashaw@cbe.com.et");
+
                         }
-                        return NotFound("you have not the access to this system");
-
+                        else
+                        {
+                            // User not found
+                            return NotFound();
+                        }
                     }
                     else
                     {
-                        // User not found
-                        return NotFound();
+                        return Unauthorized();
                     }
                 }
             }
             catch (DirectoryServicesCOMException)
             {
                 // Authentication failed
-                return Unauthorized("email or password is not correct");
+                return Unauthorized("Email or Password is Incorrect");
             }
         }
 
