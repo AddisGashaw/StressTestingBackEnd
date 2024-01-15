@@ -1449,6 +1449,12 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.TotalDisbursement)
                 .HasMaxLength(150)
                 .HasColumnName("Total_Disbursement");
+            entity.Property(e => e.TotalIncomeCbeNoorFinancing)
+                .HasMaxLength(150)
+                .HasColumnName("Total_Income_CBE_Noor_Financing");
+            entity.Property(e => e.TotalInterestEarnedLoansAndAdv)
+                .HasMaxLength(150)
+                .HasColumnName("Total_Interest_Earned_Loans_and_Adv");
             entity.Property(e => e.UploadedDate)
                 .HasColumnType("datetime")
                 .HasColumnName("uploadedDate");
