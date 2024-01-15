@@ -75,6 +75,10 @@ public partial class Sdbcredit
 
     public string? DisbursementCouponCorporateBonds { get; set; }
 
+    public string? TotalInterestEarnedLoansAndAdv { get; set; }
+
+    public string? TotalIncomeCbeNoorFinancing { get; set; }
+
     public int? UploaderUserId { get; set; }
 
     public int? ApproverUserId { get; set; }
