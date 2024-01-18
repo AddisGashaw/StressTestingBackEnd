@@ -1792,10 +1792,24 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.Borrowing)
                 .HasMaxLength(50)
                 .IsUnicode(false);
+            entity.Property(e => e.Cooperative)
+                .HasMaxLength(50)
+                .IsUnicode(false);
             entity.Property(e => e.DemandDeposit)
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("Demand_Deposit");
+            entity.Property(e => e.DisbursementCouponAndCorporateBonds)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Disbursement_Coupon_and_Corporate_Bonds");
+            entity.Property(e => e.DisbursementLoansAndAdv)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Disbursement_Loans_and_Adv");
+            entity.Property(e => e.Government)
+                .HasMaxLength(50)
+                .IsUnicode(false);
             entity.Property(e => e.Hqla)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -1804,10 +1818,29 @@ public partial class RiskApetiteContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("IFB_Deposit");
+            entity.Property(e => e.IncreaseInDepositOrNetOfReserveReqmtAndNonFundInflows)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Increase_in_Deposit_Or_net_of_reserve_reqmt_and_non_fund_inflows");
+            entity.Property(e => e.Individual)
+                .HasMaxLength(50)
+                .IsUnicode(false);
             entity.Property(e => e.InterestCashCollection)
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("Interest_cash_collection");
+            entity.Property(e => e.LiabilitiesMaturingWithinThreeMonthCustomersDeposit)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Liabilities_maturing_within_Three_month_Customers_Deposit");
+            entity.Property(e => e.LiabilitiesMaturingWithinThreeMonthDepositDueToOtherBanks)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Liabilities_maturing_within_Three_month_Deposit_Due_to_other_banks");
+            entity.Property(e => e.LiabilitiesMaturingWithinThreeMonthOtherLiabilities)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Liabilities_maturing_within_Three_month_Other_Liabilities");
             entity.Property(e => e.LiablityMaturingWithinOneYear)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -1836,6 +1869,24 @@ public partial class RiskApetiteContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("Principal_cash_collection");
+            entity.Property(e => e.PrincipalCollectionCoupAndCorpBonds)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Principal_Collection_Coup_and_Corp_Bonds");
+            entity.Property(e => e.PrincipalCollectionLoansAndAdvances)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Principal_Collection_Loans_and_Advances");
+            entity.Property(e => e.Private)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.ProvisionalProfitPerLoss)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Provisional_profit_per_loss");
+            entity.Property(e => e.Publice)
+                .HasMaxLength(50)
+                .IsUnicode(false);
             entity.Property(e => e.Quarter)
                 .HasMaxLength(50)
                 .IsUnicode(false);
@@ -1859,6 +1910,10 @@ public partial class RiskApetiteContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("Top_10_Depositors");
+            entity.Property(e => e.TotalCapital)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Total_Capital");
             entity.Property(e => e.TotalLiquidAsset)
                 .HasMaxLength(50)
                 .IsUnicode(false)

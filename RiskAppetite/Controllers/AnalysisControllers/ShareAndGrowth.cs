@@ -22,6 +22,18 @@ namespace RiskAppetite.Controllers.AnalysisControllers
             var result = await _shareAndGrowth.GetSdbcredit(years, quarters);
             return Ok(result);
         }
+        [HttpGet("GetsdbLiquidity")]
+        public async Task<ActionResult<List<Sdbliquidity>>> GetSdbLiquidity([FromQuery] string[] years, [FromQuery] string[] quarters)
+        {
+            var result = await _shareAndGrowth.GetSdbLiquidity(years, quarters);
+            return Ok(result);
+        }
+        [HttpGet("GetsdbMarket")]
+        public async Task<ActionResult<List<MarketRisk>>> GetsdbMarket([FromQuery] string[] years, [FromQuery] string[] quarters)
+        {
+            var result = await _shareAndGrowth.GetSdbMarket(years, quarters);
+            return Ok(result);
+        }
 
     }
 }
