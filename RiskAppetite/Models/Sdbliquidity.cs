@@ -57,6 +57,12 @@ public partial class Sdbliquidity
 
     public string? LiablityMaturingWithinOneYear { get; set; }
 
+    public string? LiabilitiesMaturingWithinThreeMonthDepositDueToOtherBanks { get; set; }
+
+    public string? LiabilitiesMaturingWithinThreeMonthCustomersDeposit { get; set; }
+
+    public string? LiabilitiesMaturingWithinThreeMonthOtherLiabilities { get; set; }
+
     public string? Hqla { get; set; }
 
     public string? TotalNetCurrentLiablity { get; set; }
@@ -66,6 +72,30 @@ public partial class Sdbliquidity
     public string? Top100Depositors { get; set; }
 
     public string? Top1000Depositors { get; set; }
+
+    public string? Government { get; set; }
+
+    public string? Private { get; set; }
+
+    public string? Publice { get; set; }
+
+    public string? Individual { get; set; }
+
+    public string? Cooperative { get; set; }
+
+    public string? TotalCapital { get; set; }
+
+    public string? ProvisionalProfitPerLoss { get; set; }
+
+    public string? IncreaseInDepositOrNetOfReserveReqmtAndNonFundInflows { get; set; }
+
+    public string? PrincipalCollectionLoansAndAdvances { get; set; }
+
+    public string? PrincipalCollectionCoupAndCorpBonds { get; set; }
+
+    public string? DisbursementLoansAndAdv { get; set; }
+
+    public string? DisbursementCouponAndCorporateBonds { get; set; }
 
     public int? UploaderUserId { get; set; }
 
