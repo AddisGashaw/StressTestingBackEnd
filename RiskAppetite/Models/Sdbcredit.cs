@@ -71,6 +71,8 @@ public partial class Sdbcredit
 
     public string? PrincipalCollectionCoupAndCorpBonds { get; set; }
 
+    public string? PrincipalCollectionActual { get; set; }
+
     public string? DisbursementLoansAdv { get; set; }
 
     public string? DisbursementCouponCorporateBonds { get; set; }
@@ -78,6 +80,18 @@ public partial class Sdbcredit
     public string? TotalInterestEarnedLoansAndAdv { get; set; }
 
     public string? TotalIncomeCbeNoorFinancing { get; set; }
+
+    public string? LetterOfCredit { get; set; }
+
+    public string? LoansAndBondCom { get; set; }
+
+    public string? LoansAndBondComGuarantedByCentralGov { get; set; }
+
+    public string? LoansComGuarnateedByRegionalGov { get; set; }
+
+    public string? BidBondsPerformanceBonds { get; set; }
+
+    public string? TotalOffBSheetRwa { get; set; }
 
     public int? UploaderUserId { get; set; }
 
