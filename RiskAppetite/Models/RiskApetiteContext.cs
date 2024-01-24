@@ -44,7 +44,6 @@ public partial class RiskApetiteContext : DbContext
     public virtual DbSet<SebmarketRisk> SebmarketRisks { get; set; }
 
     public virtual DbSet<UserProfile> UserProfiles { get; set; }
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Apcredit>(entity =>
@@ -1352,6 +1351,9 @@ public partial class RiskApetiteContext : DbContext
                 .HasColumnType("datetime")
                 .HasColumnName("approvedDate");
             entity.Property(e => e.ApproverUserId).HasColumnName("approverUserId");
+            entity.Property(e => e.BidBondsPerformanceBonds)
+                .HasMaxLength(50)
+                .HasColumnName("Bid_bonds_Performance_Bonds");
             entity.Property(e => e.Csbl)
                 .HasMaxLength(150)
                 .HasColumnName("CSBL");
@@ -1364,6 +1366,18 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.DoubtfulLoan)
                 .HasMaxLength(150)
                 .HasColumnName("Doubtful_Loan");
+            entity.Property(e => e.LetterOfCredit)
+                .HasMaxLength(50)
+                .HasColumnName("Letter_of_credit");
+            entity.Property(e => e.LoansAndBondCom)
+                .HasMaxLength(50)
+                .HasColumnName("Loans_and_Bond_Com");
+            entity.Property(e => e.LoansAndBondComGuarantedByCentralGov)
+                .HasMaxLength(50)
+                .HasColumnName("Loans_and_Bond_Com_guaranted_by_central_gov");
+            entity.Property(e => e.LoansComGuarnateedByRegionalGov)
+                .HasMaxLength(50)
+                .HasColumnName("Loans_Com_Guarnateed_by_regional_gov");
             entity.Property(e => e.LossLoan)
                 .HasMaxLength(150)
                 .HasColumnName("Loss_Loan");
@@ -1397,6 +1411,9 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.PassLoan)
                 .HasMaxLength(150)
                 .HasColumnName("Pass_Loan");
+            entity.Property(e => e.PrincipalCollectionActual)
+                .HasMaxLength(50)
+                .HasColumnName("Principal_Collection_Actual");
             entity.Property(e => e.PrincipalCollectionCoupAndCorpBonds)
                 .HasMaxLength(150)
                 .HasColumnName("Principal_Collection_Coup_and_Corp_Bonds");
@@ -1455,6 +1472,9 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.TotalInterestEarnedLoansAndAdv)
                 .HasMaxLength(150)
                 .HasColumnName("Total_Interest_Earned_Loans_and_Adv");
+            entity.Property(e => e.TotalOffBSheetRwa)
+                .HasMaxLength(50)
+                .HasColumnName("Total_Off_B_sheet_RWA");
             entity.Property(e => e.UploadedDate)
                 .HasColumnType("datetime")
                 .HasColumnName("uploadedDate");
