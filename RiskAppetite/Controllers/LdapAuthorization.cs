@@ -67,7 +67,8 @@ public class AuthController : ControllerBase
                             if (_context.UserProfiles.Any(u => u.EmployeeId == employeeId || u.UserEmail == email))
                             {
                                 var role = _context.UserProfiles.Where(u => u.EmployeeId == employeeId || u.UserEmail == email).Select(u => u.UserRoleId).FirstOrDefault().ToString();
-                                var token = GenerateJwtToken(displayName, employeeId, department, email, name, mailnickname, role);
+                                var UserId = _context.UserProfiles.Where(u => u.EmployeeId == employeeId || u.UserEmail == email).Select(u => u.Id).FirstOrDefault().ToString();
+                                var token = GenerateJwtToken(displayName, employeeId, department, email, name, mailnickname, role, UserId);
 
                                 return Ok(new { token = token, displayName = displayName });
 
@@ -97,7 +98,7 @@ public class AuthController : ControllerBase
 
 
     }
-    private string GenerateJwtToken(string displayName, string employeeId, string department,string email,string name,string mailnickname,string role)
+    private string GenerateJwtToken(string displayName, string employeeId, string department,string email,string name,string mailnickname,string role,string UserId)
     {
         // Set the secret key used for signing the token
         //var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("your_secret_key_here"));
@@ -123,7 +124,8 @@ public class AuthController : ControllerBase
         new Claim("mailnickname", mailnickname), 
         new Claim("name", name), 
         new Claim("email", email), 
-        new Claim("role", role) 
+        new Claim("role", role) ,
+        new Claim("UserId", UserId)
     };
 
         // Set token options

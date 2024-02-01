@@ -7,6 +7,7 @@ using RiskAppetite.Models;
 using RiskAppetite.Services.AnalysisServices.ShareAndGrowth;
 using RiskAppetite.Services.ExcelUpload;
 using RiskAppetite.Services.RoleAssignation;
+using RiskAppetite.Services.SeverityService;
 using RiskAppetite.Services.UserProfileService;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,6 +24,7 @@ builder.Services.AddScoped<IRoleAssignation, RoleAssignation>();
 builder.Services.AddScoped<IExcelUpload, ExcelUpload>();
 builder.Services.AddScoped<IUserProfile, UserProfileSer>();
 builder.Services.AddScoped<IShareAndGrowth, ShareAndGrowth>();
+builder.Services.AddScoped<ISeverity, SeverityClass>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
