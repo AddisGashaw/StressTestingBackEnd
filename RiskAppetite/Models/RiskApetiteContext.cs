@@ -43,7 +43,12 @@ public partial class RiskApetiteContext : DbContext
 
     public virtual DbSet<SebmarketRisk> SebmarketRisks { get; set; }
 
+    public virtual DbSet<Severity> Severities { get; set; }
+
+    public virtual DbSet<SeverityForAnalysis> SeverityForAnalyses { get; set; }
+
     public virtual DbSet<UserProfile> UserProfiles { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Apcredit>(entity =>
@@ -1815,6 +1820,10 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.Cooperative)
                 .HasMaxLength(50)
                 .IsUnicode(false);
+            entity.Property(e => e.CustomerDeposit)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Customer_Deposit");
             entity.Property(e => e.DemandDeposit)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -1930,10 +1939,18 @@ public partial class RiskApetiteContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("Top_10_Depositors");
+            entity.Property(e => e.TotalAsset)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Total_asset");
             entity.Property(e => e.TotalCapital)
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("Total_Capital");
+            entity.Property(e => e.TotalLiability)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Total_liability");
             entity.Property(e => e.TotalLiquidAsset)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -2670,6 +2687,240 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.Year)
                 .HasMaxLength(50)
                 .IsUnicode(false);
+        });
+
+        modelBuilder.Entity<Severity>(entity =>
+        {
+            entity.ToTable("Severity");
+
+            entity.Property(e => e.Description)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.Name)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.Status)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+
+            entity.HasOne(d => d.CreatedByNavigation).WithMany(p => p.Severities)
+                .HasForeignKey(d => d.CreatedBy)
+                .HasConstraintName("FK_Severity_UserProfile");
+        });
+
+        modelBuilder.Entity<SeverityForAnalysis>(entity =>
+        {
+            entity.ToTable("SeverityForAnalysis");
+
+            entity.Property(e => e.ActualLossPerNearMissLossToAverageOfTheThreeYearsGrossIncomeRatio)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Actual_loss_per_near_miss_loss_to_average_of_the_three_years_gross_income_ratio");
+            entity.Property(e => e.CreditConversionFactorForGuarantee)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Credit_conversion_factor_for_Guarantee");
+            entity.Property(e => e.CreditConversionFactorForLc)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Credit_conversion_factor_for_LC");
+            entity.Property(e => e.DepositGrowthPerDrawdown)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Deposit_Growth_per_Drawdown");
+            entity.Property(e => e.DepositInterestRateForSaving)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Deposit_Interest_rate_for_Saving");
+            entity.Property(e => e.DepositInterestRateForTime)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Deposit_Interest_rate_for_Time");
+            entity.Property(e => e.DepositMaturingInTheNextThreeMonths)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Deposit_maturing_in_the_next_three_months");
+            entity.Property(e => e.DevaluationOfBirrToUsdShareOfTheGapBnOfficialAndParallel)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Devaluation_of_Birr_to_USD_Share_of_the_gap_bn_official_and_Parallel");
+            entity.Property(e => e.DisburcementShareOfBond)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Disburcement_Share_of_Bond");
+            entity.Property(e => e.DisburcementShareOfLoan)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Disburcement_Share_of_Loan");
+            entity.Property(e => e.EffectiveInterestRateOfBond)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Effective_Interest_Rate_of_Bond");
+            entity.Property(e => e.EffectiveInterestRateOfLoan)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Effective_Interest_Rate_of_Loan");
+            entity.Property(e => e.External)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("External_");
+            entity.Property(e => e.IncrementalConventionalDepositShare)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Incremental_Conventional_Deposit_Share");
+            entity.Property(e => e.IncrementalConventionalSavingDepositShare)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Incremental_Conventional_Saving_Deposit_Share");
+            entity.Property(e => e.IncrementalConventionalTimeDepositShare)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Incremental_Conventional_Time_Deposit_Share");
+            entity.Property(e => e.IncrementalDepositNetOfNonFundImpact)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Incremental_deposit_net_of_non_fund_Impact");
+            entity.Property(e => e.IncrementalIfbDepositShare)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Incremental_IFB_Deposit_Share");
+            entity.Property(e => e.InterestCollectionFromTotalCollection)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Interest_collection_from_total_collection");
+            entity.Property(e => e.InterestRateDecrease)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Interest_Rate_Decrease");
+            entity.Property(e => e.InterestRateForLongTermLAndA)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Interest_Rate_for_long_term_L_and_A");
+            entity.Property(e => e.InterestRateIncrease)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Interest_Rate_Increase");
+            entity.Property(e => e.LegalReserve)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Legal_Reserve");
+            entity.Property(e => e.MaximumFundApplicationRate)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Maximum_Fund_Application_Rate");
+            entity.Property(e => e.MidRateGrowthUsdToBirr)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Mid_Rate_Growth_USD_to_Birr");
+            entity.Property(e => e.NplGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("NPL_Growth");
+            entity.Property(e => e.NplShare)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("NPL_share");
+            entity.Property(e => e.People)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.PrincipalCollectionFromTotalCollection)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Principal_collection_from_total_collection");
+            entity.Property(e => e.PrincipalCollectionShareOfBond)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Principal_Collection_share_of_bond");
+            entity.Property(e => e.PrincipalCollectionShareOfLoanAndAdvance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Principal_Collection_share_of_Loan_and_Advance");
+            entity.Property(e => e.Process)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.Quarter)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.RatioOfPrincipalLoanCollectionToPrincipalLoansAndAdvancesAmount)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Ratio_of_Principal_loan_collection_to_principal_Loans_and_Advances_Amount");
+            entity.Property(e => e.ScheduledPayables)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Scheduled_Payables");
+            entity.Property(e => e.ShareOfFreshBondDisbursmentFromTheTotalDisbursment)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Share_of_fresh_bond_disbursment_from_the_total_disbursment");
+            entity.Property(e => e.ShareOfNcsbcFromTheTotalLoan)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Share_of_NCSBC_from_the_total_loan");
+            entity.Property(e => e.ShareOfNewLoanDisbursmentFromTheTotalDisbursment)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Share_of_new_loan_disbursment_from_the_total_disbursment");
+            entity.Property(e => e.ShareOfPrincipalBondCollectionToPrincipalBondAmount)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Share_of_Principal_bond_collection_to_principal_bond_Amount");
+            entity.Property(e => e.System)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.TheIncrementOnTheActualMidRateImpactedByTheAverageGrowthRateAndDevaluation)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("The_increment_on_the_actual_mid_rate_impacted_by_the_average_growth_rate_and_devaluation");
+            entity.Property(e => e.TheShareOfFcyBsByCuurenyTypeUsd)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("The_share_of_FCY_BS_by_Cuureny_Type_USD");
+            entity.Property(e => e.Top1000DepositorsShareFromTotalDeposit)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Top_1000_Depositors_Share_from_Total_Deposit");
+            entity.Property(e => e.Top1000DepositorsWithdraw)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Top_1000_Depositors_withdraw");
+            entity.Property(e => e.Top100DepositorsShareFromTotalDeposit)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Top_100_Depositors_Share_from_Total_Deposit");
+            entity.Property(e => e.Top100DepositorsWithdraw)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Top_100_Depositors_withdraw");
+            entity.Property(e => e.Top10DepositorsShareFromTotalDeposit)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Top_10_Depositors_Share_from_Total_Deposit");
+            entity.Property(e => e.Top10DepositorsWithdraw)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Top_10_Depositors_withdraw");
+            entity.Property(e => e.TotalNetCurrentLiability)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Total_Net_Current_Liability");
+            entity.Property(e => e.UnplannedMaterializationOfCommitmentsAdjusted)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Unplanned_Materialization_of_Commitments_Adjusted");
+            entity.Property(e => e.UpdatedDate).HasColumnType("datetime");
+            entity.Property(e => e.UploadedDate).HasColumnType("datetime");
+            entity.Property(e => e.Year)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+
+            entity.HasOne(d => d.SeverityCat).WithMany(p => p.SeverityForAnalyses)
+                .HasForeignKey(d => d.SeverityCatId)
+                .HasConstraintName("FK_SeverityForAnalysis_SeverityForAnalysis");
+
+            entity.HasOne(d => d.UploaderUser).WithMany(p => p.SeverityForAnalyses)
+                .HasForeignKey(d => d.UploaderUserId)
+                .HasConstraintName("FK_SeverityForAnalysis_UserProfile");
         });
 
         modelBuilder.Entity<UserProfile>(entity =>

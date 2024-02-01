@@ -11,6 +11,8 @@ public partial class Sdbliquidity
 
     public string? Quarter { get; set; }
 
+    public string? CustomerDeposit { get; set; }
+
     public string? SavingDeposit { get; set; }
 
     public string? TimeDeposit { get; set; }
@@ -30,6 +32,8 @@ public partial class Sdbliquidity
     public string? BondPrincipalCashCollection { get; set; }
 
     public string? BondInterestCashCollection { get; set; }
+
+    public string? TotalAsset { get; set; }
 
     public string? AssetsMaturingWithinThreeMonths { get; set; }
 
@@ -64,6 +68,8 @@ public partial class Sdbliquidity
     public string? LiabilitiesMaturingWithinThreeMonthOtherLiabilities { get; set; }
 
     public string? Hqla { get; set; }
+
+    public string? TotalLiability { get; set; }
 
     public string? TotalNetCurrentLiablity { get; set; }
 

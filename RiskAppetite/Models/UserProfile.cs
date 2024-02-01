@@ -13,5 +13,9 @@ public partial class UserProfile
 
     public int? UserRoleId { get; set; }
 
+    public virtual ICollection<Severity> Severities { get; set; } = new List<Severity>();
+
+    public virtual ICollection<SeverityForAnalysis> SeverityForAnalyses { get; set; } = new List<SeverityForAnalysis>();
+
     public virtual Role? UserRole { get; set; }
 }
