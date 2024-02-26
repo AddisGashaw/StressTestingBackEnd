@@ -6,11 +6,11 @@ using RiskAppetite.Models.Dto.UserProfileDto;
 
 namespace RiskAppetite.Services.AnalysisServices.ShareAndGrowth
 {
-    public class ShareAndGrowth : IShareAndGrowth
+    public class ShareAndGrowthClass : IShareAndGrowth
     {
         private readonly RiskApetiteContext _context;
 
-        public ShareAndGrowth(RiskApetiteContext context)
+        public ShareAndGrowthClass(RiskApetiteContext context)
         {
             _context = context;
         }

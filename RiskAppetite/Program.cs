@@ -3,7 +3,9 @@ using Cbe.MiddleWare;
 using CBE_ERMS.Configuration;
 using Microsoft.EntityFrameworkCore;
 using OfficeOpenXml;
+using RiskAppetite.Controllers.AnalysisControllers;
 using RiskAppetite.Models;
+using RiskAppetite.Services.AnalysisServices.Assumption;
 using RiskAppetite.Services.AnalysisServices.ShareAndGrowth;
 using RiskAppetite.Services.ExcelUpload;
 using RiskAppetite.Services.RoleAssignation;
@@ -23,8 +25,9 @@ builder.Services.AddAutoMapper(typeof(MapperConfig));
 builder.Services.AddScoped<IRoleAssignation, RoleAssignation>();
 builder.Services.AddScoped<IExcelUpload, ExcelUpload>();
 builder.Services.AddScoped<IUserProfile, UserProfileSer>();
-builder.Services.AddScoped<IShareAndGrowth, ShareAndGrowth>();
+builder.Services.AddScoped<IShareAndGrowth, ShareAndGrowthClass>();
 builder.Services.AddScoped<ISeverity, SeverityClass>();
+builder.Services.AddScoped<IAssumption, Assumption>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
