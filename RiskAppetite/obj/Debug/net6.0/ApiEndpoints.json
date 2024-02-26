@@ -1,0 +1,1096 @@
+[
+  {
+    "ContainingType": "RiskAppetite.Controllers.AnalysisControllers.AssumptionController",
+    "Method": "GetSdbcredit",
+    "RelativePath": "api/Assumption/GetsdbforCredit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "quarter",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[RiskAppetite.Models.Sdbcredit, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.AnalysisControllers.AssumptionController",
+    "Method": "GetSdbLiquidity",
+    "RelativePath": "api/Assumption/GetsdbLiquidity",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "quarter",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[RiskAppetite.Models.Sdbliquidity, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.AnalysisControllers.AssumptionController",
+    "Method": "GetsdbMarket",
+    "RelativePath": "api/Assumption/GetsdbMarket",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "quarter",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[RiskAppetite.Models.MarketRisk, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.AnalysisControllers.AssumptionController",
+    "Method": "GetsdbOperational",
+    "RelativePath": "api/Assumption/GetsdbOperational",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "quarter",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[RiskAppetite.Models.OprationalRisk, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AuthController",
+    "Method": "GetUserRole",
+    "RelativePath": "api/Auth/GetRoleList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.Dto.userRoleListDto, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "RiskAppetite.Models.Dto.UserLoginRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.ExcelFileUploadController",
+    "Method": "UploadExcelFile",
+    "RelativePath": "api/ExcelFileUpload/UploadExcel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "destinationTable",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "uploaderUserId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.MarketRisksController",
+    "Method": "GetMarketRisks",
+    "RelativePath": "api/MarketRisks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.MarketRisk, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.MarketRisksController",
+    "Method": "PostMarketRisk",
+    "RelativePath": "api/MarketRisks",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "marketRisk",
+        "Type": "RiskAppetite.Models.MarketRisk",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RiskAppetite.Models.MarketRisk",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.MarketRisksController",
+    "Method": "GetMarketRisk",
+    "RelativePath": "api/MarketRisks/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RiskAppetite.Models.MarketRisk",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.MarketRisksController",
+    "Method": "PutMarketRisk",
+    "RelativePath": "api/MarketRisks/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "marketRisk",
+        "Type": "RiskAppetite.Models.MarketRisk",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.MarketRisksController",
+    "Method": "DeleteMarketRisk",
+    "RelativePath": "api/MarketRisks/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.OprationalRisksController",
+    "Method": "GetOprationalRisks",
+    "RelativePath": "api/OprationalRisks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.OprationalRisk, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.OprationalRisksController",
+    "Method": "PostOprationalRisk",
+    "RelativePath": "api/OprationalRisks",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "oprationalRisk",
+        "Type": "RiskAppetite.Models.OprationalRisk",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RiskAppetite.Models.OprationalRisk",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.OprationalRisksController",
+    "Method": "GetOprationalRisk",
+    "RelativePath": "api/OprationalRisks/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RiskAppetite.Models.OprationalRisk",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.OprationalRisksController",
+    "Method": "PutOprationalRisk",
+    "RelativePath": "api/OprationalRisks/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "oprationalRisk",
+        "Type": "RiskAppetite.Models.OprationalRisk",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.OprationalRisksController",
+    "Method": "DeleteOprationalRisk",
+    "RelativePath": "api/OprationalRisks/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.RoleAssignation",
+    "Method": "RoleAssignment",
+    "RelativePath": "api/RoleAssignation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserRoleAssignationDto",
+        "Type": "RiskAppetite.Models.Dto.UserRoleAssignationDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SdbactualFinancialStatementsController",
+    "Method": "GetSdbactualFinancialStatements",
+    "RelativePath": "api/SdbactualFinancialStatements",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.SdbactualFinancialStatement, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SdbactualFinancialStatementsController",
+    "Method": "PostSdbactualFinancialStatement",
+    "RelativePath": "api/SdbactualFinancialStatements",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sdbactualFinancialStatement",
+        "Type": "RiskAppetite.Models.SdbactualFinancialStatement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RiskAppetite.Models.SdbactualFinancialStatement",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SdbactualFinancialStatementsController",
+    "Method": "GetSdbactualFinancialStatement",
+    "RelativePath": "api/SdbactualFinancialStatements/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RiskAppetite.Models.SdbactualFinancialStatement",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SdbactualFinancialStatementsController",
+    "Method": "PutSdbactualFinancialStatement",
+    "RelativePath": "api/SdbactualFinancialStatements/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "sdbactualFinancialStatement",
+        "Type": "RiskAppetite.Models.SdbactualFinancialStatement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SdbactualFinancialStatementsController",
+    "Method": "DeleteSdbactualFinancialStatement",
+    "RelativePath": "api/SdbactualFinancialStatements/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SdbcreditsController",
+    "Method": "GetSdbcredits",
+    "RelativePath": "api/Sdbcredits",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.Sdbcredit, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SdbcreditsController",
+    "Method": "PostSdbcredit",
+    "RelativePath": "api/Sdbcredits",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sdbcredit",
+        "Type": "RiskAppetite.Models.Sdbcredit",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RiskAppetite.Models.Sdbcredit",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SdbcreditsController",
+    "Method": "GetSdbcredit",
+    "RelativePath": "api/Sdbcredits/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RiskAppetite.Models.Sdbcredit",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SdbcreditsController",
+    "Method": "PutSdbcredit",
+    "RelativePath": "api/Sdbcredits/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "sdbcredit",
+        "Type": "RiskAppetite.Models.Sdbcredit",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SdbcreditsController",
+    "Method": "DeleteSdbcredit",
+    "RelativePath": "api/Sdbcredits/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SdbliquiditiesController",
+    "Method": "GetSdbliquidities",
+    "RelativePath": "api/Sdbliquidities",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.Sdbliquidity, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SdbliquiditiesController",
+    "Method": "PostSdbliquidity",
+    "RelativePath": "api/Sdbliquidities",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sdbliquidity",
+        "Type": "RiskAppetite.Models.Sdbliquidity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RiskAppetite.Models.Sdbliquidity",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SdbliquiditiesController",
+    "Method": "GetSdbliquidity",
+    "RelativePath": "api/Sdbliquidities/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RiskAppetite.Models.Sdbliquidity",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SdbliquiditiesController",
+    "Method": "PutSdbliquidity",
+    "RelativePath": "api/Sdbliquidities/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "sdbliquidity",
+        "Type": "RiskAppetite.Models.Sdbliquidity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SdbliquiditiesController",
+    "Method": "DeleteSdbliquidity",
+    "RelativePath": "api/Sdbliquidities/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.AnalysisControllers.Severity",
+    "Method": "DeleteSeverity",
+    "RelativePath": "api/Severity/DeleteSeverity/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.AnalysisControllers.Severity",
+    "Method": "GetSeverities",
+    "RelativePath": "api/Severity/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.Dto.SeverityDto.SeverityReadDto, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.AnalysisControllers.Severity",
+    "Method": "GetSeverityById",
+    "RelativePath": "api/Severity/GetSeverityById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RiskAppetite.Models.Dto.SeverityDto.SeverityReadDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.AnalysisControllers.Severity",
+    "Method": "GetSeverityByYearAndQuarter",
+    "RelativePath": "api/Severity/GetSeverityByYearAndQuarter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "quarter",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RiskAppetite.Models.Dto.SeverityDto.SeverityReadDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.AnalysisControllers.Severity",
+    "Method": "Register",
+    "RelativePath": "api/Severity/RegisterSeverity",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "SeverityCreateDto",
+        "Type": "RiskAppetite.Models.Dto.SeverityDto.SeverityCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.AnalysisControllers.Severity",
+    "Method": "UpdateSeverity",
+    "RelativePath": "api/Severity/UpdateSeverity/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "SeverityCreateDto",
+        "Type": "RiskAppetite.Models.Dto.SeverityDto.SeverityCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RiskAppetite.Models.Dto.SeverityDto.SeverityCreateDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.AnalysisControllers.ShareAndGrowth",
+    "Method": "GetSdbcredit",
+    "RelativePath": "api/ShareAndGrowth/GetsdbforShare",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "years",
+        "Type": "System.String[]",
+        "IsRequired": false
+      },
+      {
+        "Name": "quarters",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[RiskAppetite.Models.Sdbcredit, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.AnalysisControllers.ShareAndGrowth",
+    "Method": "GetSdbLiquidity",
+    "RelativePath": "api/ShareAndGrowth/GetsdbLiquidity",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "years",
+        "Type": "System.String[]",
+        "IsRequired": false
+      },
+      {
+        "Name": "quarters",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[RiskAppetite.Models.Sdbliquidity, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.AnalysisControllers.ShareAndGrowth",
+    "Method": "GetsdbMarket",
+    "RelativePath": "api/ShareAndGrowth/GetsdbMarket",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "years",
+        "Type": "System.String[]",
+        "IsRequired": false
+      },
+      {
+        "Name": "quarters",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[RiskAppetite.Models.MarketRisk, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.UserProfile",
+    "Method": "GetUserDetails",
+    "RelativePath": "api/UserProfile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.Dto.UserProfileDto.userProfileReadOnlyDto, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.UserProfile",
+    "Method": "DeleteUserDetail",
+    "RelativePath": "api/UserProfile/DeleteUserDetail/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.UserProfile",
+    "Method": "GetUserDetailById",
+    "RelativePath": "api/UserProfile/GetUserDetailById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RiskAppetite.Models.Dto.UserProfileDto.userProfileReadOnlyDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.UserProfile",
+    "Method": "RoleAssignment",
+    "RelativePath": "api/UserProfile/RegisterUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userProfileUpdateDto",
+        "Type": "RiskAppetite.Models.Dto.UserProfileDto.userProfileUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.UserProfile",
+    "Method": "UpdateUserProfile",
+    "RelativePath": "api/UserProfile/UpdateUserProfile/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "userProfileUpdateDto",
+        "Type": "RiskAppetite.Models.Dto.UserProfileDto.userProfileUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RiskAppetite.Models.Dto.UserProfileDto.userProfileUpdateDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
