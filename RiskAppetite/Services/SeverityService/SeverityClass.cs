@@ -26,6 +26,8 @@ namespace RiskAppetite.Services.SeverityService
             await _context.SaveChangesAsync();
             return SeverityCreateDto;
         }
+
+
       
         public async Task<IEnumerable<SeverityReadDto>> GetSeverities()
         {
@@ -36,6 +38,24 @@ namespace RiskAppetite.Services.SeverityService
             var SeverityList = await _context.SeverityForAnalyses.Include(q => q.SeverityCat).ToListAsync();
             return _mapper.Map<IEnumerable<SeverityReadDto>>(SeverityList);
         }
+
+
+
+        public async Task<IEnumerable<SeverityReadDto>> GetSeverityByYearAndQuarter(string year, string quarter, int id)
+        {
+            var severities = await _context.SeverityForAnalyses.Include(q=>q.SeverityCat)
+                .Where(s => s.Year == year && s.Quarter == quarter && s.SeverityCatId==id)
+                .ToListAsync();
+
+            if (severities.Count == 0)
+            {
+                throw new DataNotFoundException($"No severities found for year {year} and quarter {quarter}.");
+            }
+
+            // var severityDetail = _mapper.Map<IEnumerable<SeverityReadDto>>(severities);
+            return _mapper.Map<IEnumerable<SeverityReadDto>>(severities);
+        }
+
 
         public async Task<ActionResult<SeverityReadDto>> GetSeverityById(int id)
         {
@@ -50,6 +70,13 @@ namespace RiskAppetite.Services.SeverityService
             Severity = await _context.SeverityForAnalyses.FirstOrDefaultAsync(c => c.Id == id);
             var SeverityDetail = _mapper.Map<SeverityReadDto>(Severity);
             return SeverityDetail;
+        }
+
+
+
+        private int GetQuarter(DateTime date)
+        {
+            return (date.Month - 1) / 3 + 1;
         }
 
         public async Task<SeverityCreateDto> UpdateSeverity(int id, SeverityCreateDto SeverityCreateDto)

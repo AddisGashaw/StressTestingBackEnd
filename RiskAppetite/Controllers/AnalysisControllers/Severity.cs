@@ -37,6 +37,14 @@ namespace RiskAppetite.Controllers.AnalysisControllers
             return Ok(result);
 
         }
+
+        [HttpGet("GetSeverityByYearAndQuarter")]
+        public async Task<ActionResult<SeverityReadDto>> GetSeverityByYearAndQuarter(string year, string quarter, int id)
+        {
+            var result = await _severity.GetSeverityByYearAndQuarter(year, quarter, id);
+
+            return Ok(result);
+        }
         [HttpPut("UpdateSeverity/{id}")]
         public async Task<ActionResult<SeverityCreateDto>> UpdateSeverity(int id, SeverityCreateDto SeverityCreateDto)
         {
