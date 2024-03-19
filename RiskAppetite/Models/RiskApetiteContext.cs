@@ -1111,7 +1111,10 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.NearMissesSystem)
                 .HasMaxLength(50)
                 .HasColumnName("Near_Misses_System");
+            entity.Property(e => e.NetInterestIncome).HasMaxLength(50);
+            entity.Property(e => e.NetNonInterestIncome).HasMaxLength(50);
             entity.Property(e => e.Quarter).HasMaxLength(50);
+            entity.Property(e => e.Revenue).HasMaxLength(50);
             entity.Property(e => e.UploadedDate)
                 .HasColumnType("datetime")
                 .HasColumnName("uploadedDate");

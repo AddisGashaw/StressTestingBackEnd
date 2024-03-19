@@ -27,6 +27,12 @@ public partial class OprationalRisk
 
     public string? NearMissesSystem { get; set; }
 
+    public string? Revenue { get; set; }
+
+    public string? NetInterestIncome { get; set; }
+
+    public string? NetNonInterestIncome { get; set; }
+
     public int? UploaderUserId { get; set; }
 
     public int? ApproverUserId { get; set; }
