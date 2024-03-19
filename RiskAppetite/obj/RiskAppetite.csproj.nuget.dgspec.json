@@ -1,28 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\RiskAppetite.csproj": {}
+    "C:\\Users\\addisgashaw\\Desktop\\RiskAppetite\\RiskAppetite\\RiskAppetite.csproj": {}
   },
   "projects": {
-    "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\RiskAppetite.csproj": {
+    "C:\\Users\\addisgashaw\\Desktop\\RiskAppetite\\RiskAppetite\\RiskAppetite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\RiskAppetite.csproj",
+        "projectUniqueName": "C:\\Users\\addisgashaw\\Desktop\\RiskAppetite\\RiskAppetite\\RiskAppetite.csproj",
         "projectName": "RiskAppetite",
-        "projectPath": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\RiskAppetite.csproj",
-        "packagesPath": "C:\\Users\\gedewonfikremariam\\.nuget\\packages\\",
-        "outputPath": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\obj\\",
+        "projectPath": "C:\\Users\\addisgashaw\\Desktop\\RiskAppetite\\RiskAppetite\\RiskAppetite.csproj",
+        "packagesPath": "C:\\Users\\addisgashaw\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\addisgashaw\\Desktop\\RiskAppetite\\RiskAppetite\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\gedewonfikremariam\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.2.config",
+          "C:\\Users\\addisgashaw\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 19.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -36,11 +34,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -139,7 +132,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
