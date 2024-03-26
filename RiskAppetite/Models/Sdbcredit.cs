@@ -93,6 +93,8 @@ public partial class Sdbcredit
 
     public string? TotalOffBSheetRwa { get; set; }
 
+    public string? AdjustedCommitment { get; set; }
+
     public int? UploaderUserId { get; set; }
 
     public int? ApproverUserId { get; set; }
