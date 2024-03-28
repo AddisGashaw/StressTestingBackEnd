@@ -48,6 +48,25 @@ namespace RiskAppetite.Controllers
 
             return oprationalRisk;
         }
+        [HttpGet("GetSdbOperationalByyearandQuarter")]
+        public async Task<ActionResult<IEnumerable<OprationalRisk>>> GetSdbforcastByyearandQuarter([FromQuery] string year, [FromQuery] string quarter)
+        {
+            if (_context.OprationalRisks == null)
+            {
+                return NotFound();
+            }
+            //List<OprationalRisk> OperationalRisk = new List<OprationalRisk>();
+
+            var oprationalRisk = await _context.OprationalRisks.Where(x=>x.Year== year && x.Quarter== quarter).ToListAsync();
+
+            if (oprationalRisk == null)
+            {
+                return NotFound();
+            }
+
+            return oprationalRisk;
+        }
+
 
         // PUT: api/OprationalRisks/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
