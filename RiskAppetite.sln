@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiskAppetite", "RiskAppetite\RiskAppetite.csproj", "{10E42F54-310D-4AA7-97E0-AB8A163FE384}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiskAppetite", "RiskAppetite\RiskAppetite.csproj", "{10E42F54-310D-4AA7-97E0-AB8A163FE384}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiskApetite.tests", "RiskApetite.tests\RiskApetite.tests.csproj", "{AFDC4B85-F8E6-4992-95D4-6B9507D5DC7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{10E42F54-310D-4AA7-97E0-AB8A163FE384}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10E42F54-310D-4AA7-97E0-AB8A163FE384}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10E42F54-310D-4AA7-97E0-AB8A163FE384}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFDC4B85-F8E6-4992-95D4-6B9507D5DC7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFDC4B85-F8E6-4992-95D4-6B9507D5DC7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFDC4B85-F8E6-4992-95D4-6B9507D5DC7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFDC4B85-F8E6-4992-95D4-6B9507D5DC7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -79,7 +79,24 @@ namespace RiskAppetite.Controllers
 
             return NoContent();
         }
+        [HttpGet("GetSdbMarkrtByyearandQuarter")]
+        public async Task<ActionResult<IEnumerable<MarketRisk>>> GetSdbMarkrtByyearandQuarter([FromQuery] string year, [FromQuery] string quarter)
+        {
+            if (_context.MarketRisks == null)
+            {
+                return NotFound();
+            }
+            //List<OprationalRisk> OperationalRisk = new List<OprationalRisk>();
 
+            var marketRisk = await _context.MarketRisks.Where(x => x.Year == year && x.Quarter== quarter).ToListAsync();
+
+            if (marketRisk == null)
+            {
+                return NotFound();
+            }
+
+            return marketRisk;
+        }
         // POST: api/MarketRisks
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]

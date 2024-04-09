@@ -49,7 +49,7 @@ namespace RiskAppetite.Controllers
             return oprationalRisk;
         }
         [HttpGet("GetSdbOperationalByyearandQuarter")]
-        public async Task<ActionResult<IEnumerable<OprationalRisk>>> GetSdbforcastByyearandQuarter([FromQuery] string year, [FromQuery] string quarter)
+        public async Task<ActionResult<IEnumerable<OprationalRisk>>> GetSdbOperationalByyearandQuarter([FromQuery] string year, [FromQuery] string quarter)
         {
             if (_context.OprationalRisks == null)
             {
@@ -138,5 +138,6 @@ namespace RiskAppetite.Controllers
         {
             return (_context.OprationalRisks?.Any(e => e.Id == id)).GetValueOrDefault();
         }
+       
     }
 }
