@@ -28,7 +28,7 @@ public class AuthController : ControllerBase
     }
     [AllowAnonymous]
     [HttpPost("login")]
-    public IActionResult Login([FromBody] UserLoginRequestDto model)
+    public ActionResult Login([FromBody] UserLoginRequestDto model)
     {
         //if (_context.UserProfiles.Any(u => u.UserEmail == model.UserName))
             using (var entry = new DirectoryEntry("LDAP://10.1.11.13"))
@@ -39,7 +39,7 @@ public class AuthController : ControllerBase
             // Set the username and password for authentication
             entry.Username = username;
             entry.Password = password;
-
+            Console.WriteLine();
             try
             {
                 // Attempt to bind with the provided credentials
