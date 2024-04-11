@@ -109,6 +109,10 @@ public partial class MarketRisk
 
     public string? FcyOnBSLiabilitiesInOtherCurrenciesInBirr { get; set; }
 
+    public string? FcyOnBSLetterOfCredit { get; set; }
+
+    public string? FcyOnBSGuarantee { get; set; }
+
     public string? FcyFcyAssetCashAndDepositByUsd { get; set; }
 
     public string? FcyCorrespondenOurAccountMillionUsdEquva { get; set; }

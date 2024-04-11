@@ -949,6 +949,12 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.FcyOnBSAssetsInUsd)
                 .HasMaxLength(50)
                 .HasColumnName("FCY_On_B_S_Assets_in_USD");
+            entity.Property(e => e.FcyOnBSGuarantee)
+                .HasMaxLength(50)
+                .HasColumnName("FCY_On_B_S_Guarantee");
+            entity.Property(e => e.FcyOnBSLetterOfCredit)
+                .HasMaxLength(50)
+                .HasColumnName("FCY_On_B_S_Letter_of_Credit");
             entity.Property(e => e.FcyOnBSLiabilitiesInOtherCurrenciesInBirr)
                 .HasMaxLength(50)
                 .HasColumnName("FCY_On_B_S_Liabilities_in_other_currencies_in_birr");
