@@ -48,7 +48,24 @@ namespace RiskAppetite.Controllers
 
             return sdbcredit;
         }
+        [HttpGet("GetSdbCredittByyearandQuarter")]
+        public async Task<ActionResult<IEnumerable<Sdbcredit>>> GetSdbCredittByyearandQuarter([FromQuery] string year, [FromQuery] string quarter)
+        {
+            if (_context.Sdbcredits == null)
+            {
+                return NotFound();
+            }
+            //List<OprationalRisk> OperationalRisk = new List<OprationalRisk>();
 
+            var CreditRisk = await _context.Sdbcredits.Where(x => x.Year == year && x.Quarter == quarter).ToListAsync();
+
+            if (CreditRisk == null)
+            {
+                return NotFound();
+            }
+
+            return CreditRisk;
+        }
         // PUT: api/Sdbcredits/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]

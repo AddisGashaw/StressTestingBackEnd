@@ -20,7 +20,6 @@ public class AuthController : ControllerBase
 {
     private readonly RiskApetiteContext _context;
     private readonly IMapper _mapper;
-
     public AuthController(RiskApetiteContext context,IMapper mapper)
     {
         _context = context;

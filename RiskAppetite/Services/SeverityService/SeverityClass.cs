@@ -17,15 +17,36 @@ namespace RiskAppetite.Services.SeverityService
             _mapper = mapper;
             _context = context;
         }
-
-        public async Task<SeverityCreateDto> Register(SeverityCreateDto SeverityCreateDto)
+        public async Task<ActionResult<string>> Register(SeverityCreateDto severityCreateDto)
         {
-            
-            var AssignedUser = _mapper.Map<SeverityForAnalysis>(SeverityCreateDto);
-            await _context.SeverityForAnalyses.AddAsync(AssignedUser);
-            await _context.SaveChangesAsync();
-            return SeverityCreateDto;
+            try
+            {
+                var assignedUser = _mapper.Map<SeverityForAnalysis>(severityCreateDto);
+
+                _context.SeverityForAnalyses.Add(assignedUser);
+                await _context.SaveChangesAsync();
+
+                // Retrieve the generated ID
+                var generatedId = assignedUser.Id.ToString();
+
+
+                // Return the generated form ID in the response
+                return generatedId;
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
         }
+
+        //public async Task<SeverityCreateDto> Register(SeverityCreateDto SeverityCreateDto)
+        //{
+            
+        //    var AssignedUser = _mapper.Map<SeverityForAnalysis>(SeverityCreateDto);
+        //    await _context.SeverityForAnalyses.AddAsync(AssignedUser);
+        //    await _context.SaveChangesAsync();
+        //    return SeverityCreateDto;
+        //}
 
 
       
@@ -38,8 +59,6 @@ namespace RiskAppetite.Services.SeverityService
             var SeverityList = await _context.SeverityForAnalyses.Include(q => q.SeverityCat).ToListAsync();
             return _mapper.Map<IEnumerable<SeverityReadDto>>(SeverityList);
         }
-
-
 
         public async Task<IEnumerable<SeverityReadDto>> GetSeverityByYearAndQuarter(string year, string quarter, int id)
         {

@@ -115,6 +115,26 @@ namespace RiskAppetite.Controllers
             return NoContent();
         }
 
+        [HttpGet("GetSdbLiquidityByyearandQuarter")]
+        public async Task<ActionResult<IEnumerable<Sdbliquidity>>> GetSdbLiquidityByyearandQuarter([FromQuery] string year, [FromQuery] string quarter)
+        {
+            if (_context.Sdbliquidities == null)
+            {
+                return NotFound();
+            }
+            //List<OprationalRisk> OperationalRisk = new List<OprationalRisk>();
+
+            var LiquidityRisk = await _context.Sdbliquidities.Where(x => x.Year == year && x.Quarter == quarter).ToListAsync();
+
+            if (LiquidityRisk == null)
+            {
+                return NotFound();
+            }
+
+            return LiquidityRisk;
+        }
+
+
         private bool SdbliquidityExists(int id)
         {
             return (_context.Sdbliquidities?.Any(e => e.IdNo == id)).GetValueOrDefault();

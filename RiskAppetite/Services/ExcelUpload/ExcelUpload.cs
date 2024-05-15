@@ -62,7 +62,7 @@ namespace RiskAppetite.Services.ExcelUpload
                     DataTable dataTable = new DataTable();
 
                     // Add columns dynamically based on the column names in the Excel file
-                    for (int col = 1; col <= columnCount; col++)
+                    for (int col = 1; col <= headerColumnCount; col++)
                     {
                         string columnName = worksheet.Cells[1,col].Value?.ToString()??String.Empty;
                         DataColumn column = new DataColumn(columnName,typeof(string));
@@ -86,7 +86,7 @@ namespace RiskAppetite.Services.ExcelUpload
                     for (int row = 2; row <= rowCount; row++)
                     {
                         DataRow dataRow = dataTable.NewRow();
-                        for (int col = 1; col <= columnCount; col++)
+                        for (int col = 1; col <= headerColumnCount; col++)
                         {
                             string columnName = dataTable.Columns[col - 1].ColumnName;
                             object cellvalue=worksheet.Cells[row, col].Value;
@@ -121,7 +121,7 @@ namespace RiskAppetite.Services.ExcelUpload
                             bulkCopy.ColumnMappings.Add("approverUserId", "approverUserId");
                             bulkCopy.ColumnMappings.Add("approvalstatus", "approvalstatus");
                             bulkCopy.ColumnMappings.Add("uploadedDate", "uploadedDate");
-                            bulkCopy.ColumnMappings.Add("approvedDate", "approvedDate");                  
+                            bulkCopy.ColumnMappings.Add("approvedDate", "approvedDate");
                             bulkCopy.WriteToServer(dataTable);
                             connection.Close();
                         }

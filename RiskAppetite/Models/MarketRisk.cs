@@ -73,6 +73,12 @@ public partial class MarketRisk
 
     public string? OpenPositionByOtherCurrencyShort { get; set; }
 
+    public string? OpenPositionByUsdShortExcludingNbe { get; set; }
+
+    public string? OpenPositionByEurShortExcludingNbe { get; set; }
+
+    public string? OpenPositionByEurOtherCurrencyExcludingNbe { get; set; }
+
     public string? TotalOnBSFcyAssetsUsd { get; set; }
 
     public string? TotalOnBSFcyAssetsEur { get; set; }

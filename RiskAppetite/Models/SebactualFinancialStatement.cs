@@ -9,26 +9,6 @@ public partial class SebactualFinancialStatement
 
     public string? Year { get; set; }
 
-    public string? TotalOffBsCommit { get; set; }
-
-    public string? OffBalanceSheetoffBalanceSheet { get; set; }
-
-    public string? OffBalanceSheetletterOfCredit { get; set; }
-
-    public string? OffBalanceSheetloansAndBondCom { get; set; }
-
-    public string? OffBalanceSheetloansAndBondComGuarantedByCentralGov { get; set; }
-
-    public string? OffBalanceSheetloansComGuarnateedByRegionalGov { get; set; }
-
-    public string? OffBalanceSheetbidBondsPerformanceBonds { get; set; }
-
-    public string? TotalInterestEarnedLoansAndAdva { get; set; }
-
-    public string? TotalIncomeCbeNoorFinancing { get; set; }
-
-    public string? TotalRiskWeightedAssetRwa { get; set; }
-
     public string? LoansAndAdvancesInterestIncome { get; set; }
 
     public string? BondsAndSecuritiesInterestIncome { get; set; }
@@ -43,19 +23,19 @@ public partial class SebactualFinancialStatement
 
     public string? InterestExpense { get; set; }
 
-    public string? ProfitPaidToCbeNoorDeposit { get; set; }
+    public string? ProfitPaidCbeNoorDeposit { get; set; }
 
     public string? EmployeesSalaries { get; set; }
 
     public string? EmployeesBenefits { get; set; }
 
-    public string? EmployeesProvisions { get; set; }
+    public string? EmployeesProvissions { get; set; }
 
     public string? GeneralExpenses { get; set; }
 
     public string? LossOnFx { get; set; }
 
-    public string? ImpairmentOnFinancialAssets { get; set; }
+    public string? ImpairmrntOnFinancialAssets { get; set; }
 
     public string? ProfitLossBeforeTaxation { get; set; }
 
@@ -102,6 +82,8 @@ public partial class SebactualFinancialStatement
     public string? BorrowingNationalBankLiabilities { get; set; }
 
     public string? OtherLiabilities { get; set; }
+
+    public string? Equity { get; set; }
 
     public string? Capital { get; set; }
 

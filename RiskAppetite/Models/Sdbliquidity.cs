@@ -49,6 +49,16 @@ public partial class Sdbliquidity
 
     public string? AssetsMaturingWithinThreeMonthsLoanAndFinancialInstitutions { get; set; }
 
+    public string? AssetsMaturingWithin3To6Month { get; set; }
+
+    public string? AssetsMaturingWithin6To12Month { get; set; }
+
+    public string? AssetsMaturingWithin1To3Years { get; set; }
+
+    public string? AssetsMaturingOver3Years { get; set; }
+
+    public string? NonMaturingAssets { get; set; }
+
     public string? TotalLiquidAsset { get; set; }
 
     public string? Borrowing { get; set; }
@@ -67,6 +77,16 @@ public partial class Sdbliquidity
 
     public string? LiabilitiesMaturingWithinThreeMonthOtherLiabilities { get; set; }
 
+    public string? LiabilitiesMaturingWithin3To6Month { get; set; }
+
+    public string? LiabilitiesMaturingWithin6To12Month { get; set; }
+
+    public string? LiabilitiesMaturingWithin1To3Years { get; set; }
+
+    public string? LiabilitiesMaturingWithinOver3Years { get; set; }
+
+    public string? NonMaturingLiabilities { get; set; }
+
     public string? Hqla { get; set; }
 
     public string? TotalLiability { get; set; }
@@ -78,6 +98,10 @@ public partial class Sdbliquidity
     public string? Top100Depositors { get; set; }
 
     public string? Top1000Depositors { get; set; }
+
+    public string? TotalCapitalForForexFromOpenPosition { get; set; }
+
+    public string? TotalCapitalForCarFromFs { get; set; }
 
     public string? Government { get; set; }
 

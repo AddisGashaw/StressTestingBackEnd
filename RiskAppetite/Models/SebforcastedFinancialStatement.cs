@@ -11,9 +11,9 @@ public partial class SebforcastedFinancialStatement
 
     public string? ForcastedInterestIncomeLoansAndAdvances { get; set; }
 
-    public string? ForcastedInterestIncomebondsAndSecurities { get; set; }
+    public string? ForcastedInterestIncomeBondsAndSecurities { get; set; }
 
-    public string? ForcastedCommissionAndCharges { get; set; }
+    public string? ForcastedCommissionAndChargesIncome { get; set; }
 
     public string? ForcastedCbeNoorIncome { get; set; }
 
@@ -23,19 +23,19 @@ public partial class SebforcastedFinancialStatement
 
     public string? ForcastedInterestExpense { get; set; }
 
-    public string? ForcastedProfitPaidToCbeNoorDeposit { get; set; }
+    public string? ForcastedProfitPaidCbeNoorDeposit { get; set; }
 
     public string? ForcastedEmployeesSalaries { get; set; }
 
     public string? ForcastedEmployeesBenefits { get; set; }
 
-    public string? ForcastedEmployeesProvisions { get; set; }
+    public string? ForcastedEmployeesProvissions { get; set; }
 
     public string? ForcastedGeneralExpenses { get; set; }
 
     public string? ForcastedLossOnFx { get; set; }
 
-    public string? ForcastedImpairmentOnFinancialAssets { get; set; }
+    public string? ForcastedImpairmrntOnFinancialAssets { get; set; }
 
     public string? ForcastedProfitLossBeforeTaxation { get; set; }
 
@@ -82,6 +82,8 @@ public partial class SebforcastedFinancialStatement
     public string? ForcastedBorrowingNationalBankLiabilities { get; set; }
 
     public string? ForcastedOtherLiabilities { get; set; }
+
+    public string? ForcastedEquity { get; set; }
 
     public string? ForcastedCapital { get; set; }
 
