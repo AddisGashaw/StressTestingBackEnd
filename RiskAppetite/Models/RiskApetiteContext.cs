@@ -48,6 +48,7 @@ public partial class RiskApetiteContext : DbContext
     public virtual DbSet<SeverityForAnalysis> SeverityForAnalyses { get; set; }
 
     public virtual DbSet<UserProfile> UserProfiles { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Apcredit>(entity =>
@@ -1006,15 +1007,24 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.OfficialMarketRate)
                 .HasMaxLength(50)
                 .HasColumnName("Official_Market_Rate");
+            entity.Property(e => e.OpenPositionByEurOtherCurrencyExcludingNbe)
+                .HasMaxLength(50)
+                .HasColumnName("Open_Position_By_EUR_Other_Currency_Excluding_NBE");
             entity.Property(e => e.OpenPositionByEurShort)
                 .HasMaxLength(50)
                 .HasColumnName("Open_Position_By_EUR_short");
+            entity.Property(e => e.OpenPositionByEurShortExcludingNbe)
+                .HasMaxLength(50)
+                .HasColumnName("Open_Position_By_EUR_Short_Excluding_NBE");
             entity.Property(e => e.OpenPositionByOtherCurrencyShort)
                 .HasMaxLength(50)
                 .HasColumnName("Open_Position_By_Other_currency_short");
             entity.Property(e => e.OpenPositionByUsdShort)
                 .HasMaxLength(50)
                 .HasColumnName("Open_Position_By_USD_short");
+            entity.Property(e => e.OpenPositionByUsdShortExcludingNbe)
+                .HasMaxLength(50)
+                .HasColumnName("Open_Position_By_USD_short_Excluding_NBE");
             entity.Property(e => e.ParallelMarketRate)
                 .HasMaxLength(50)
                 .HasColumnName("Parallel_Market_Rate");
@@ -1935,6 +1945,22 @@ public partial class RiskApetiteContext : DbContext
                 .HasColumnType("datetime")
                 .HasColumnName("approvedDate");
             entity.Property(e => e.ApproverUserId).HasColumnName("approverUserId");
+            entity.Property(e => e.AssetsMaturingOver3Years)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Assets_maturing_Over_3_Years");
+            entity.Property(e => e.AssetsMaturingWithin1To3Years)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Assets_maturing_within_1_to_3_Years");
+            entity.Property(e => e.AssetsMaturingWithin3To6Month)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Assets_maturing_within_3_to_6_month");
+            entity.Property(e => e.AssetsMaturingWithin6To12Month)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Assets_maturing_within_6_to_12_month");
             entity.Property(e => e.AssetsMaturingWithinOneYear)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -2015,6 +2041,22 @@ public partial class RiskApetiteContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("Interest_cash_collection");
+            entity.Property(e => e.LiabilitiesMaturingWithin1To3Years)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Liabilities_maturing_within_1_to_3_years");
+            entity.Property(e => e.LiabilitiesMaturingWithin3To6Month)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Liabilities_maturing_within_3_to_6_month");
+            entity.Property(e => e.LiabilitiesMaturingWithin6To12Month)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Liabilities_maturing_within_6_to_12_month");
+            entity.Property(e => e.LiabilitiesMaturingWithinOver3Years)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Liabilities_maturing_within_over_3_years");
             entity.Property(e => e.LiabilitiesMaturingWithinThreeMonthCustomersDeposit)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -2047,6 +2089,14 @@ public partial class RiskApetiteContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("loan_principal_cash_collection");
+            entity.Property(e => e.NonMaturingAssets)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Non_Maturing_Assets");
+            entity.Property(e => e.NonMaturingLiabilities)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Non_Maturing_Liabilities");
             entity.Property(e => e.OtherLiablity)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -2104,6 +2154,14 @@ public partial class RiskApetiteContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("Total_Capital");
+            entity.Property(e => e.TotalCapitalForCarFromFs)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Total_Capital_for_CAR_from_FS");
+            entity.Property(e => e.TotalCapitalForForexFromOpenPosition)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Total_Capital_for_forex_from_open_position");
             entity.Property(e => e.TotalLiability)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -2141,7 +2199,7 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.BondsAndSecuritiesInterestIncome)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("BONDS_and_SECURITIES_Interest_Income");
+                .HasColumnName("Bonds_and_Securities_Interest_Income");
             entity.Property(e => e.BorrowingNationalBankLiabilities)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -2156,7 +2214,7 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.CbeNoorIncome)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("CBE_NOOR_INCOME");
+                .HasColumnName("CBE_Noor_Income");
             entity.Property(e => e.CbeNoorReserve)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -2164,7 +2222,7 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.CommissionAndChargesIncome)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("COMMISSION_AND_CHARGES_Income");
+                .HasColumnName("Commission_and_Charges_Income");
             entity.Property(e => e.CustomersDeposits)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -2191,15 +2249,18 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.EmployeesBenefits)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("EMPLOYEES_BENEFITS");
-            entity.Property(e => e.EmployeesProvisions)
+                .HasColumnName("Employees_Benefits");
+            entity.Property(e => e.EmployeesProvissions)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("EMPLOYEES_PROVISIONS");
+                .HasColumnName("Employees_Provissions");
             entity.Property(e => e.EmployeesSalaries)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("EMPLOYEES_SALARIES");
+                .HasColumnName("Employees_Salaries");
+            entity.Property(e => e.Equity)
+                .HasMaxLength(50)
+                .IsUnicode(false);
             entity.Property(e => e.FinanceLeaseObligations)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -2211,11 +2272,11 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.GeneralExpenses)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("GENERAL_EXPENSES");
-            entity.Property(e => e.ImpairmentOnFinancialAssets)
+                .HasColumnName("General_Expenses");
+            entity.Property(e => e.ImpairmrntOnFinancialAssets)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("IMPAIRMENT_ON_FINANCIAL_ASSETS");
+                .HasColumnName("Impairmrnt_On_Financial_Assets");
             entity.Property(e => e.IntangibleAssetsSoftwares)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -2223,7 +2284,7 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.InterestExpense)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("INTEREST_EXPENSE");
+                .HasColumnName("Interest_Expense");
             entity.Property(e => e.InvestmentsInSubsidiariesAndAssociates)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -2239,7 +2300,7 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.LoansAndAdvancesInterestIncome)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("LOANS_AND_ADVANCES_Interest_Income");
+                .HasColumnName("Loans_and_Advances_Interest_Income");
             entity.Property(e => e.LoansToFinancialInstitutions)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -2247,7 +2308,7 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.LossOnFx)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("LOSS_ON_FX");
+                .HasColumnName("Loss_On_FX");
             entity.Property(e => e.MarginHeldPayable)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -2256,30 +2317,6 @@ public partial class RiskApetiteContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("Non_current_assets_held_for_sale_net");
-            entity.Property(e => e.OffBalanceSheetbidBondsPerformanceBonds)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("OFF_BALANCE_SHEETBid_bonds_Performance_Bonds");
-            entity.Property(e => e.OffBalanceSheetletterOfCredit)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("OFF_BALANCE_SHEETLetter_of_credit");
-            entity.Property(e => e.OffBalanceSheetloansAndBondCom)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("OFF_BALANCE_SHEETLoans_and_Bond_Com");
-            entity.Property(e => e.OffBalanceSheetloansAndBondComGuarantedByCentralGov)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("OFF_BALANCE_SHEETLoans_and_Bond_Com_guaranted_by_central_gov");
-            entity.Property(e => e.OffBalanceSheetloansComGuarnateedByRegionalGov)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("OFF_BALANCE_SHEETLoans_com_Guarnateed_by_regional_gov");
-            entity.Property(e => e.OffBalanceSheetoffBalanceSheet)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("OFF_BALANCE_SHEETOFF_BALANCE_SHEET");
             entity.Property(e => e.OtherAssets)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -2291,7 +2328,7 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.OtherIncome)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("OTHER_INCOME");
+                .HasColumnName("Other_Income");
             entity.Property(e => e.OtherLiabilities)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -2299,11 +2336,11 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.ProfitLossBeforeTaxation)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("PROFIT_LOSS_BEFORE_TAXATION");
-            entity.Property(e => e.ProfitPaidToCbeNoorDeposit)
+                .HasColumnName("Profit_Loss_Before_Taxation");
+            entity.Property(e => e.ProfitPaidCbeNoorDeposit)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("PROFIT_PAID_TO_CBE_NOOR_DEPOSIT");
+                .HasColumnName("Profit_Paid_CBE_Noor_Deposit");
             entity.Property(e => e.PropertyPlantAndEquipmentNet)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -2331,22 +2368,6 @@ public partial class RiskApetiteContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("Tax_and_Pension_Payable");
-            entity.Property(e => e.TotalIncomeCbeNoorFinancing)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("TOTAL_INCOME_CBE_NOOR_FINANCING");
-            entity.Property(e => e.TotalInterestEarnedLoansAndAdva)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("TOTAL_INTEREST_EARNED_LOANS_AND_ADVA");
-            entity.Property(e => e.TotalOffBsCommit)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("Total_off_Bs_commit");
-            entity.Property(e => e.TotalRiskWeightedAssetRwa)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("Total_Risk_Weighted_Asset_RWA");
             entity.Property(e => e.UploadedDate)
                 .HasColumnType("datetime")
                 .HasColumnName("uploadedDate");
@@ -2365,6 +2386,9 @@ public partial class RiskApetiteContext : DbContext
                 .HasColumnType("datetime")
                 .HasColumnName("approvedDate");
             entity.Property(e => e.ApproverUserId).HasColumnName("approverUserId");
+            entity.Property(e => e.BidBondsPerformanceBonds)
+                .HasMaxLength(50)
+                .HasColumnName("Bid_bonds_Performance_Bonds");
             entity.Property(e => e.Csbl)
                 .HasMaxLength(50)
                 .HasColumnName("CSBL");
@@ -2374,9 +2398,24 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.DisbursementLoansAndAdv)
                 .HasMaxLength(50)
                 .HasColumnName("Disbursement_Loans_And_Adv");
-            entity.Property(e => e.LoanAndAdavce)
+            entity.Property(e => e.IncreaseInDepositNetOfReserveReqmtAndNonFundInflows)
                 .HasMaxLength(50)
-                .HasColumnName("Loan_and_Adavce");
+                .HasColumnName("Increase_in_Deposit_net_of_reserve_reqmt_and_non_fund_inflows");
+            entity.Property(e => e.LetterOfCredit)
+                .HasMaxLength(50)
+                .HasColumnName("Letter_of_credit");
+            entity.Property(e => e.LoanAndAdvance)
+                .HasMaxLength(50)
+                .HasColumnName("Loan_and_Advance");
+            entity.Property(e => e.LoansAndBondCom)
+                .HasMaxLength(50)
+                .HasColumnName("Loans_and_Bond_Com");
+            entity.Property(e => e.LoansAndBondComGuarantedByCentralGov)
+                .HasMaxLength(50)
+                .HasColumnName("Loans_and_Bond_Com_guaranted_by_central_gov");
+            entity.Property(e => e.LoansComGuarnateedByRegionalGov)
+                .HasMaxLength(50)
+                .HasColumnName("Loans_com_Guarnateed_by_regional_gov");
             entity.Property(e => e.NcsblPrivateAndCooperatives)
                 .HasMaxLength(50)
                 .HasColumnName("NCSBL_Private_and_Cooperatives");
@@ -2389,9 +2428,6 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.NonPerformingLoanNpl)
                 .HasMaxLength(50)
                 .HasColumnName("Non_Performing_Loan_NPL");
-            entity.Property(e => e.PerformingLoanAmount)
-                .HasMaxLength(50)
-                .HasColumnName("Performing_loan_amount");
             entity.Property(e => e.PrincipalCollectionCoupAndCorpBonds)
                 .HasMaxLength(50)
                 .HasColumnName("Principal_Collection_Coup_And_Corp_Bonds");
@@ -2402,6 +2438,18 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.TotalBond)
                 .HasMaxLength(50)
                 .HasColumnName("Total_Bond");
+            entity.Property(e => e.TotalIncomeCbeNoorFinancing)
+                .HasMaxLength(50)
+                .HasColumnName("Total_Income_CBE_Noor_Financing");
+            entity.Property(e => e.TotalInterestEarnedLoansAndAdvance)
+                .HasMaxLength(50)
+                .HasColumnName("Total_Interest_Earned_Loans_and_Advance");
+            entity.Property(e => e.TotalOffBsCommit)
+                .HasMaxLength(50)
+                .HasColumnName("Total_off_Bs_commit");
+            entity.Property(e => e.TotalRiskWeightedAssetRwa)
+                .HasMaxLength(50)
+                .HasColumnName("Total_Risk_Weighted_Asset_RWA");
             entity.Property(e => e.UploadedDate)
                 .HasColumnType("datetime")
                 .HasColumnName("uploadedDate");
@@ -2453,15 +2501,15 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.ForcastedCbeNoorIncome)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("Forcasted_CBE_NOOR_INCOME");
+                .HasColumnName("Forcasted_CBE_Noor_Income");
             entity.Property(e => e.ForcastedCbeNoorReserve)
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("Forcasted_CBE_Noor_reserve");
-            entity.Property(e => e.ForcastedCommissionAndCharges)
+            entity.Property(e => e.ForcastedCommissionAndChargesIncome)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("Forcasted_COMMISSION_AND_CHARGES");
+                .HasColumnName("Forcasted_Commission_and_Charges_Income");
             entity.Property(e => e.ForcastedCouponBondPrincipal)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -2513,15 +2561,19 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.ForcastedEmployeesBenefits)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("Forcasted_EMPLOYEES_BENEFITS");
-            entity.Property(e => e.ForcastedEmployeesProvisions)
+                .HasColumnName("Forcasted_Employees_Benefits");
+            entity.Property(e => e.ForcastedEmployeesProvissions)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("Forcasted_EMPLOYEES_PROVISIONS");
+                .HasColumnName("Forcasted_Employees_Provissions");
             entity.Property(e => e.ForcastedEmployeesSalaries)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("Forcasted_EMPLOYEES_SALARIES");
+                .HasColumnName("Forcasted_Employees_Salaries");
+            entity.Property(e => e.ForcastedEquity)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Forcasted_Equity");
             entity.Property(e => e.ForcastedFinanceLeaseObligations)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -2533,15 +2585,15 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.ForcastedGeneralExpenses)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("Forcasted_GENERAL_EXPENSES");
+                .HasColumnName("Forcasted_General_Expenses");
             entity.Property(e => e.ForcastedGovernmentBond)
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("Forcasted_Government_Bond");
-            entity.Property(e => e.ForcastedImpairmentOnFinancialAssets)
+            entity.Property(e => e.ForcastedImpairmrntOnFinancialAssets)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("Forcasted_IMPAIRMENT_ON_FINANCIAL_ASSETS");
+                .HasColumnName("Forcasted_Impairmrnt_On_Financial_Assets");
             entity.Property(e => e.ForcastedIntangibleAssetsSoftwares)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -2549,15 +2601,15 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.ForcastedInterestExpense)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("Forcasted_INTEREST_EXPENSE");
+                .HasColumnName("Forcasted_Interest_Expense");
+            entity.Property(e => e.ForcastedInterestIncomeBondsAndSecurities)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Forcasted_Interest_Income_Bonds_and_Securities");
             entity.Property(e => e.ForcastedInterestIncomeLoansAndAdvances)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("Forcasted_INTEREST_INCOME_LOANS_AND_ADVANCES");
-            entity.Property(e => e.ForcastedInterestIncomebondsAndSecurities)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("Forcasted_INTEREST_INCOMEBONDS_and_SECURITIES");
+                .HasColumnName("Forcasted_Interest_Income_Loans_and_advances");
             entity.Property(e => e.ForcastedInvestmentsInSubsidiariesAndAssociates)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -2581,7 +2633,7 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.ForcastedLossOnFx)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("Forcasted_LOSS_ON_FX");
+                .HasColumnName("Forcasted_Loss_On_FX");
             entity.Property(e => e.ForcastedMarginHeldPayable)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -2601,7 +2653,7 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.ForcastedOtherIncome)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("Forcasted_OTHER_INCOME");
+                .HasColumnName("Forcasted_Other_Income");
             entity.Property(e => e.ForcastedOtherLiabilities)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -2609,11 +2661,11 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.ForcastedProfitLossBeforeTaxation)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("Forcasted_PROFIT_LOSS_BEFORE_TAXATION");
-            entity.Property(e => e.ForcastedProfitPaidToCbeNoorDeposit)
+                .HasColumnName("Forcasted_Profit_Loss_Before_Taxation");
+            entity.Property(e => e.ForcastedProfitPaidCbeNoorDeposit)
                 .HasMaxLength(50)
                 .IsUnicode(false)
-                .HasColumnName("Forcasted_PROFIT_PAID_TO_CBE_NOOR_DEPOSIT");
+                .HasColumnName("Forcasted_Profit_Paid_CBE_Noor_Deposit");
             entity.Property(e => e.ForcastedPropertyPlantAndEquipmentNet)
                 .HasMaxLength(50)
                 .IsUnicode(false)
@@ -2693,9 +2745,36 @@ public partial class RiskApetiteContext : DbContext
                 .HasColumnType("datetime")
                 .HasColumnName("approvedDate");
             entity.Property(e => e.ApproverUserId).HasColumnName("approverUserId");
+            entity.Property(e => e.DebtSecuritiesBonds)
+                .HasMaxLength(50)
+                .HasColumnName("Debt_securities_Bonds");
+            entity.Property(e => e.DepositsHeldAtOtherFinancialInstitutionsForOperationalPurpose)
+                .HasMaxLength(50)
+                .HasColumnName("Deposits_held_at_other_financial_institutions_for_operational_purpose");
+            entity.Property(e => e.EquitySecurityInvestmentOnShares)
+                .HasMaxLength(50)
+                .HasColumnName("Equity_Security_investment_on_shares");
+            entity.Property(e => e.InvestmentInSubsidiariesAndAssociates)
+                .HasMaxLength(50)
+                .HasColumnName("Investment_in_subsidiaries_and_Associates");
+            entity.Property(e => e.LessStableDeposit)
+                .HasMaxLength(50)
+                .HasColumnName("Less_stable_deposit");
+            entity.Property(e => e.LoanAndAdvances)
+                .HasMaxLength(50)
+                .HasColumnName("Loan_and_Advances");
+            entity.Property(e => e.OtherAssets)
+                .HasMaxLength(50)
+                .HasColumnName("Other_Assets");
+            entity.Property(e => e.OtherLiabilitiesIncludesBorrowingMarginHeldAccountAndOthers)
+                .HasMaxLength(50)
+                .HasColumnName("Other_Liabilities_includes_Borrowing_Margin_Held_account_and_others");
             entity.Property(e => e.OutstandingDeposit)
                 .HasMaxLength(50)
                 .HasColumnName("Outstanding_Deposit");
+            entity.Property(e => e.StableDeposit)
+                .HasMaxLength(50)
+                .HasColumnName("Stable_deposit");
             entity.Property(e => e.TotalCbeNoorDemandDeposit)
                 .HasMaxLength(50)
                 .HasColumnName("Total_CBE_Noor_Demand_Deposit");
@@ -2714,6 +2793,9 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.TotalSavingsDeposit)
                 .HasMaxLength(50)
                 .HasColumnName("Total_Savings_Deposit");
+            entity.Property(e => e.UndrawnAmountOfCommittedCreditFacilities)
+                .HasMaxLength(50)
+                .HasColumnName("Undrawn_amount_of_Committed_Credit_facilities");
             entity.Property(e => e.UploadedDate)
                 .HasColumnType("datetime")
                 .HasColumnName("uploadedDate");

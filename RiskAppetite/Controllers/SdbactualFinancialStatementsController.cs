@@ -114,6 +114,22 @@ namespace RiskAppetite.Controllers
 
             return NoContent();
         }
+        [HttpGet("GetSdbActualFinancialStatmentByYearandQuarter")]
+        public async Task<ActionResult<IEnumerable<SdbactualFinancialStatement>>> GetSdbActualFinancialByyearandQuarter([FromQuery] string year, [FromQuery] string quarter)
+        {
+            if (_context.SdbactualFinancialStatements == null)
+            {
+                return NotFound();
+            }
+            var SdbactualFinancial = await _context.SdbactualFinancialStatements.Where(x => x.Year == year && x.Quarter == quarter).ToListAsync();
+
+            if (SdbactualFinancial == null)
+            {
+                return NotFound();
+            }
+
+            return SdbactualFinancial;
+        }
 
         private bool SdbactualFinancialStatementExists(int id)
         {

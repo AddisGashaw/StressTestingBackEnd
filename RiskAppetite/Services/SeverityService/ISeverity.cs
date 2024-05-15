@@ -11,7 +11,7 @@ namespace RiskAppetite.Services.SeverityService
         Task<IEnumerable<SeverityReadDto>> GetSeverityByYearAndQuarter(string year, string quarter, int id);
         Task<SeverityCreateDto> UpdateSeverity(int id, SeverityCreateDto SeverityCreateDto);
         Task DeleteSeverity(int id);
-        Task<SeverityCreateDto> Register(SeverityCreateDto SeverityCreateDto);
-
+        Task<ActionResult<string>> Register(SeverityCreateDto severityCreateDto);
+        //Task<SeverityCreateDto> Register(SeverityCreateDto SeverityCreateDto);
     }
 }
