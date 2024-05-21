@@ -20,7 +20,7 @@ namespace RiskAppetite.Controllers
             _context = context;
         }
 
-        // GET: api/Sdbcredits
+        // GET: api/SebcreditRisks
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SebcreditRisk>>> GetSebcredits()
         {
@@ -33,7 +33,7 @@ namespace RiskAppetite.Controllers
             return sortedData;
         }
 
-        // GET: api/Sdbcredits/5
+        // GET: api/SebcreditRisks/5
         [HttpGet("{id}")]
         public async Task<ActionResult<SebcreditRisk>> GetSebcredits(int id)
         {
@@ -81,10 +81,10 @@ namespace RiskAppetite.Controllers
             var sortedData = await _context.SebcreditRisks.OrderByDescending(risk => risk.Year).Take(40).ToListAsync();
             return sortedData;
         }
-        // PUT: api/Sdbcredits/5
+        // PUT: api/SebcreditRisks/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutSebcredit(int id, Sdbcredit sebcredit)
+        public async Task<IActionResult> PutSebcredit(int id, SebcreditRisk sebcredit)
         {
             if (id != sebcredit.Id)
             {
@@ -112,10 +112,10 @@ namespace RiskAppetite.Controllers
             return NoContent();
         }
 
-        // POST: api/Sdbcredits
+        // POST: api/SebcreditRisks
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Sdbcredit>> PostSebcredit(SebcreditRisk sebcredit)
+        public async Task<ActionResult<SebcreditRisk>> PostSebcredit(SebcreditRisk sebcredit)
         {
             if (_context.SebcreditRisks == null)
             {
@@ -127,7 +127,7 @@ namespace RiskAppetite.Controllers
             return CreatedAtAction("GetSebcredit", new { id = sebcredit.Id }, sebcredit);
         }
 
-        // DELETE: api/Sdbcredits/5
+        // DELETE: api/SebcreditRisks/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteSebcredit(int id)
         {

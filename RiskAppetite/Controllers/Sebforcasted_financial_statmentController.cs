@@ -19,7 +19,7 @@ namespace RiskAppetite.Controllers
             _context = context;
         }
 
-        // GET: api/Sdbcredits
+        // GET: api/SebforcastedFinancialStatements
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SebforcastedFinancialStatement>>> GetSebforcastedFinancialStatements()
         {
@@ -32,7 +32,7 @@ namespace RiskAppetite.Controllers
             return sortedData;
         }
 
-        // GET: api/Sdbcredits/5
+        // GET: api/SebforcastedFinancialStatements/5
         [HttpGet("{id}")]
         public async Task<ActionResult<SebforcastedFinancialStatement>> GetSebforcastedFinancialStatements(int id)
         {
@@ -80,10 +80,10 @@ namespace RiskAppetite.Controllers
             var sortedData = await _context.SebforcastedFinancialStatements.OrderByDescending(risk => risk.ForcastedYear).Take(40).ToListAsync();
             return sortedData;
         }
-        // PUT: api/Sdbcredits/5
+        // PUT: api/SebforcastedFinancialStatements/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutSebforcastedFinancialStatement(int id, Sdbcredit sebforcastedFinancialStatement)
+        public async Task<IActionResult> PutSebforcastedFinancialStatement(int id, SebforcastedFinancialStatement sebforcastedFinancialStatement)
         {
             if (id != sebforcastedFinancialStatement.Id)
             {
@@ -111,10 +111,10 @@ namespace RiskAppetite.Controllers
             return NoContent();
         }
 
-        // POST: api/Sdbcredits
+        // POST: api/SebforcastedFinancialStatements
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Sdbcredit>> PostSebforcastedFinancialStatement(SebforcastedFinancialStatement sebforcastedFinancialStatement)
+        public async Task<ActionResult<SebforcastedFinancialStatement>> PostSebforcastedFinancialStatement(SebforcastedFinancialStatement sebforcastedFinancialStatement)
         {
             if (_context.SebforcastedFinancialStatements == null)
             {
@@ -126,7 +126,7 @@ namespace RiskAppetite.Controllers
             return CreatedAtAction("GetSebforcastedFinancialStatement", new { id = sebforcastedFinancialStatement.Id }, sebforcastedFinancialStatement);
         }
 
-        // DELETE: api/Sdbcredits/5
+        // DELETE: api/SebforcastedFinancialStatements/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteSebforcastedFinancialStatement(int id)
         {
