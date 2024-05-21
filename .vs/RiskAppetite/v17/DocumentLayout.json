@@ -3,80 +3,12 @@
   "WorkspaceRootPath": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|e:\\projects\\ruf back\\riskapetitebackend\\riskappetite\\controllers\\analysiscontrollers\\assumptioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|solutionrelative:riskappetite\\controllers\\analysiscontrollers\\assumptioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|e:\\projects\\ruf back\\riskapetitebackend\\riskappetite\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|solutionrelative:riskappetite\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|e:\\projects\\ruf back\\riskapetitebackend\\riskappetite\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|solutionrelative:riskappetite\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|e:\\projects\\ruf back\\riskapetitebackend\\riskappetite\\controllers\\analysiscontrollers\\severity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|solutionrelative:riskappetite\\controllers\\analysiscontrollers\\severity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|e:\\projects\\ruf back\\riskapetitebackend\\riskappetite\\services\\severityservice\\iseverity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|solutionrelative:riskappetite\\services\\severityservice\\iseverity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|e:\\projects\\ruf back\\riskapetitebackend\\riskappetite\\services\\severityservice\\severityclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|solutionrelative:riskappetite\\services\\severityservice\\severityclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|e:\\projects\\ruf back\\riskapetitebackend\\riskappetite\\models\\severityforanalysis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|solutionrelative:riskappetite\\models\\severityforanalysis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|e:\\projects\\ruf back\\riskapetitebackend\\riskappetite\\services\\analysisservices\\assumption\\assumption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|solutionrelative:riskappetite\\services\\analysisservices\\assumption\\assumption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|e:\\projects\\ruf back\\riskapetitebackend\\riskappetite\\controllers\\analysiscontrollers\\shareandgrowth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|solutionrelative:riskappetite\\controllers\\analysiscontrollers\\shareandgrowth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|e:\\projects\\ruf back\\riskapetitebackend\\riskappetite\\services\\analysisservices\\assumption\\iassumption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|solutionrelative:riskappetite\\services\\analysisservices\\assumption\\iassumption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|e:\\projects\\ruf back\\riskapetitebackend\\riskappetite\\services\\analysisservices\\shareandgrowth\\shareandgrowth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|solutionrelative:riskappetite\\services\\analysisservices\\shareandgrowth\\shareandgrowth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|e:\\projects\\ruf back\\riskapetitebackend\\riskappetite\\services\\analysisservices\\shareandgrowth\\ishareandgrowth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|solutionrelative:riskappetite\\services\\analysisservices\\shareandgrowth\\ishareandgrowth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|e:\\projects\\ruf back\\riskapetitebackend\\riskappetite\\controllers\\sebcreditcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|solutionrelative:riskappetite\\controllers\\sebcreditcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|e:\\projects\\ruf back\\riskapetitebackend\\riskappetite\\controllers\\sdbcreditscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|solutionrelative:riskappetite\\controllers\\sdbcreditscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|e:\\projects\\ruf back\\riskapetitebackend\\riskappetite\\models\\riskapetitecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|solutionrelative:riskappetite\\models\\riskapetitecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|e:\\projects\\ruf back\\riskapetitebackend\\riskappetite\\controllers\\marketriskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|solutionrelative:riskappetite\\controllers\\marketriskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|e:\\projects\\ruf back\\riskapetitebackend\\riskappetite\\controllers\\sdbliquiditiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|solutionrelative:riskappetite\\controllers\\sdbliquiditiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|e:\\projects\\ruf back\\riskapetitebackend\\riskappetite\\controllers\\oprationalriskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|solutionrelative:riskappetite\\controllers\\oprationalriskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|e:\\projects\\ruf back\\riskapetitebackend\\riskappetite\\controllers\\sdbactualfinancialstatementscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|solutionrelative:riskappetite\\controllers\\sdbactualfinancialstatementscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|e:\\projects\\ruf back\\riskapetitebackend\\riskappetite\\services\\excelupload\\excelupload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10E42F54-310D-4AA7-97E0-AB8A163FE384}|RiskAppetite\\RiskAppetite.csproj|solutionrelative:riskappetite\\services\\excelupload\\excelupload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -86,238 +18,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IAssumption.cs",
-              "DocumentMoniker": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Services\\AnalysisServices\\Assumption\\IAssumption.cs",
-              "RelativeDocumentMoniker": "RiskAppetite\\Services\\AnalysisServices\\Assumption\\IAssumption.cs",
-              "ToolTip": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Services\\AnalysisServices\\Assumption\\IAssumption.cs",
-              "RelativeToolTip": "RiskAppetite\\Services\\AnalysisServices\\Assumption\\IAssumption.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T12:41:55.456Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IShareAndGrowth.cs",
-              "DocumentMoniker": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Services\\AnalysisServices\\ShareAndGrowth\\IShareAndGrowth.cs",
-              "RelativeDocumentMoniker": "RiskAppetite\\Services\\AnalysisServices\\ShareAndGrowth\\IShareAndGrowth.cs",
-              "ToolTip": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Services\\AnalysisServices\\ShareAndGrowth\\IShareAndGrowth.cs",
-              "RelativeToolTip": "RiskAppetite\\Services\\AnalysisServices\\ShareAndGrowth\\IShareAndGrowth.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T12:41:55.468Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "SdbactualFinancialStatementsController.cs",
-              "DocumentMoniker": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Controllers\\SdbactualFinancialStatementsController.cs",
-              "RelativeDocumentMoniker": "RiskAppetite\\Controllers\\SdbactualFinancialStatementsController.cs",
-              "ToolTip": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Controllers\\SdbactualFinancialStatementsController.cs",
-              "RelativeToolTip": "RiskAppetite\\Controllers\\SdbactualFinancialStatementsController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T12:41:55.47Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "SdbliquiditiesController.cs",
-              "DocumentMoniker": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Controllers\\SdbliquiditiesController.cs",
-              "RelativeDocumentMoniker": "RiskAppetite\\Controllers\\SdbliquiditiesController.cs",
-              "ToolTip": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Controllers\\SdbliquiditiesController.cs",
-              "RelativeToolTip": "RiskAppetite\\Controllers\\SdbliquiditiesController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T12:41:55.472Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Program.cs",
-              "RelativeDocumentMoniker": "RiskAppetite\\Program.cs",
-              "ToolTip": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Program.cs",
-              "RelativeToolTip": "RiskAppetite\\Program.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAABgAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T12:41:55.478Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SeverityForAnalysis.cs",
-              "DocumentMoniker": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Models\\SeverityForAnalysis.cs",
-              "RelativeDocumentMoniker": "RiskAppetite\\Models\\SeverityForAnalysis.cs",
-              "ToolTip": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Models\\SeverityForAnalysis.cs",
-              "RelativeToolTip": "RiskAppetite\\Models\\SeverityForAnalysis.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAADwvy8AAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-22T11:00:36.393Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\appsettings.json",
-              "RelativeDocumentMoniker": "RiskAppetite\\appsettings.json",
-              "ToolTip": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\appsettings.json",
-              "RelativeToolTip": "RiskAppetite\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-02-21T12:41:55.474Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Severity.cs",
-              "DocumentMoniker": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Controllers\\AnalysisControllers\\Severity.cs",
-              "RelativeDocumentMoniker": "RiskAppetite\\Controllers\\AnalysisControllers\\Severity.cs",
-              "ToolTip": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Controllers\\AnalysisControllers\\Severity.cs",
-              "RelativeToolTip": "RiskAppetite\\Controllers\\AnalysisControllers\\Severity.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAA7wCYAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T12:41:55.462Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AssumptionController.cs",
-              "DocumentMoniker": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Controllers\\AnalysisControllers\\AssumptionController.cs",
-              "RelativeDocumentMoniker": "RiskAppetite\\Controllers\\AnalysisControllers\\AssumptionController.cs",
-              "ToolTip": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Controllers\\AnalysisControllers\\AssumptionController.cs",
-              "RelativeToolTip": "RiskAppetite\\Controllers\\AnalysisControllers\\AssumptionController.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAADwvyQAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T12:41:55.461Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ShareAndGrowth.cs",
-              "DocumentMoniker": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Services\\AnalysisServices\\ShareAndGrowth\\ShareAndGrowth.cs",
-              "RelativeDocumentMoniker": "RiskAppetite\\Services\\AnalysisServices\\ShareAndGrowth\\ShareAndGrowth.cs",
-              "ToolTip": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Services\\AnalysisServices\\ShareAndGrowth\\ShareAndGrowth.cs",
-              "RelativeToolTip": "RiskAppetite\\Services\\AnalysisServices\\ShareAndGrowth\\ShareAndGrowth.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAowCIAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T12:41:55.466Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ShareAndGrowth.cs",
-              "DocumentMoniker": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Controllers\\AnalysisControllers\\ShareAndGrowth.cs",
-              "RelativeDocumentMoniker": "RiskAppetite\\Controllers\\AnalysisControllers\\ShareAndGrowth.cs",
-              "ToolTip": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Controllers\\AnalysisControllers\\ShareAndGrowth.cs",
-              "RelativeToolTip": "RiskAppetite\\Controllers\\AnalysisControllers\\ShareAndGrowth.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABIAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T12:41:55.465Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Assumption.cs",
-              "DocumentMoniker": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Services\\AnalysisServices\\Assumption\\Assumption.cs",
-              "RelativeDocumentMoniker": "RiskAppetite\\Services\\AnalysisServices\\Assumption\\Assumption.cs",
-              "ToolTip": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Services\\AnalysisServices\\Assumption\\Assumption.cs",
-              "RelativeToolTip": "RiskAppetite\\Services\\AnalysisServices\\Assumption\\Assumption.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T12:41:55.458Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ISeverity.cs",
-              "DocumentMoniker": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Services\\SeverityService\\ISeverity.cs",
-              "RelativeDocumentMoniker": "RiskAppetite\\Services\\SeverityService\\ISeverity.cs",
-              "ToolTip": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Services\\SeverityService\\ISeverity.cs",
-              "RelativeToolTip": "RiskAppetite\\Services\\SeverityService\\ISeverity.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-22T08:07:53.665Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SeverityClass.cs",
-              "DocumentMoniker": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Services\\SeverityService\\SeverityClass.cs",
-              "RelativeDocumentMoniker": "RiskAppetite\\Services\\SeverityService\\SeverityClass.cs",
-              "ToolTip": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Services\\SeverityService\\SeverityClass.cs",
-              "RelativeToolTip": "RiskAppetite\\Services\\SeverityService\\SeverityClass.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-22T08:07:54.967Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "RiskApetiteContext.cs",
-              "DocumentMoniker": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Models\\RiskApetiteContext.cs",
-              "RelativeDocumentMoniker": "RiskAppetite\\Models\\RiskApetiteContext.cs",
-              "ToolTip": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Models\\RiskApetiteContext.cs",
-              "RelativeToolTip": "RiskAppetite\\Models\\RiskApetiteContext.cs",
-              "ViewState": "AQIAADcHAAAAAAAAAAAMwEcHAABdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T12:41:55.476Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "OprationalRisksController.cs",
-              "DocumentMoniker": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Controllers\\OprationalRisksController.cs",
-              "RelativeDocumentMoniker": "RiskAppetite\\Controllers\\OprationalRisksController.cs",
-              "ToolTip": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Controllers\\OprationalRisksController.cs",
-              "RelativeToolTip": "RiskAppetite\\Controllers\\OprationalRisksController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T12:41:55.48Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "MarketRisksController.cs",
-              "DocumentMoniker": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Controllers\\MarketRisksController.cs",
-              "RelativeDocumentMoniker": "RiskAppetite\\Controllers\\MarketRisksController.cs",
-              "ToolTip": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Controllers\\MarketRisksController.cs",
-              "RelativeToolTip": "RiskAppetite\\Controllers\\MarketRisksController.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAEIAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T12:41:55.483Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
               "Title": "SdbcreditsController.cs",
               "DocumentMoniker": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Controllers\\SdbcreditsController.cs",
               "RelativeDocumentMoniker": "RiskAppetite\\Controllers\\SdbcreditsController.cs",
               "ToolTip": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Controllers\\SdbcreditsController.cs",
               "RelativeToolTip": "RiskAppetite\\Controllers\\SdbcreditsController.cs",
-              "ViewState": "AQIAAF4AAAAAAAAAAAAcwDsAAAANAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T12:41:55.487Z"
+              "WhenOpened": "2024-05-21T07:32:30.094Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ExcelUpload.cs",
-              "DocumentMoniker": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Services\\ExcelUpload\\ExcelUpload.cs",
-              "RelativeDocumentMoniker": "RiskAppetite\\Services\\ExcelUpload\\ExcelUpload.cs",
-              "ToolTip": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Services\\ExcelUpload\\ExcelUpload.cs",
-              "RelativeToolTip": "RiskAppetite\\Services\\ExcelUpload\\ExcelUpload.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAA1wDMAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "SebcreditController.cs",
+              "DocumentMoniker": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Controllers\\SebcreditController.cs",
+              "RelativeDocumentMoniker": "RiskAppetite\\Controllers\\SebcreditController.cs",
+              "ToolTip": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\Controllers\\SebcreditController.cs",
+              "RelativeToolTip": "RiskAppetite\\Controllers\\SebcreditController.cs",
+              "ViewState": "AQIAAHQAAAAAAAAAAIA2wIUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T12:41:55.489Z"
+              "WhenOpened": "2024-05-21T07:29:45.089Z",
+              "EditorCaption": ""
             }
           ]
         }

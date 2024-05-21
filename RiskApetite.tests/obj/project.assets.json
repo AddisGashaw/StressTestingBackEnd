@@ -15069,25 +15069,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\addisgashaw\\.nuget\\packages\\": {}
+    "C:\\Users\\gedewonfikremariam\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\addisgashaw\\Desktop\\RiskAppetite\\RiskApetite.tests\\RiskApetite.tests.csproj",
+      "projectUniqueName": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskApetite.tests\\RiskApetite.tests.csproj",
       "projectName": "RiskApetite.tests",
-      "projectPath": "C:\\Users\\addisgashaw\\Desktop\\RiskAppetite\\RiskApetite.tests\\RiskApetite.tests.csproj",
-      "packagesPath": "C:\\Users\\addisgashaw\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\addisgashaw\\Desktop\\RiskAppetite\\RiskApetite.tests\\obj\\",
+      "projectPath": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskApetite.tests\\RiskApetite.tests.csproj",
+      "packagesPath": "C:\\Users\\gedewonfikremariam\\.nuget\\packages\\",
+      "outputPath": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskApetite.tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\addisgashaw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gedewonfikremariam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.2.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\DevExpress 19.2\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -15095,8 +15097,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\addisgashaw\\Desktop\\RiskAppetite\\RiskAppetite\\RiskAppetite.csproj": {
-              "projectPath": "C:\\Users\\addisgashaw\\Desktop\\RiskAppetite\\RiskAppetite\\RiskAppetite.csproj"
+            "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\RiskAppetite.csproj": {
+              "projectPath": "E:\\Projects\\RUF BACK\\RiskApetiteBackEnd\\RiskAppetite\\RiskAppetite.csproj"
             }
           }
         }
@@ -15105,6 +15107,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -15160,7 +15167,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }
