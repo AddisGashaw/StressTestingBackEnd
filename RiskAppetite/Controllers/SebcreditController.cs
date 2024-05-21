@@ -28,7 +28,9 @@ namespace RiskAppetite.Controllers
             {
                 return NotFound();
             }
-            return await _context.SebcreditRisks.ToListAsync();
+
+            var sortedData = await _context.SebcreditRisks.OrderBy(risk => risk.Year).ToListAsync();
+            return sortedData;
         }
 
         // GET: api/Sdbcredits/5
