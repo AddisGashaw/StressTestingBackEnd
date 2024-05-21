@@ -71,14 +71,14 @@ namespace RiskAppetite.Controllers
 
         // Fetching Data of 40 years
         [HttpGet("GetSebMarketofFourtyYears")]
-        public async Task<ActionResult<IEnumerable<SebmarketRisk>>> GetSebMarketofFourtyYears()
+        public async Task<ActionResult<IEnumerable<SebmarketRisk>>> GetSebMarketofFourtyYears([FromQuery] string year)
         {
             if (_context.SebmarketRisks == null)
             {
                 return NotFound();
             }
 
-            var sortedData = await _context.SebmarketRisks.OrderByDescending(risk => risk.Year).Take(40).ToListAsync();
+            var sortedData = await _context.SebmarketRisks.OrderByDescending(risk => risk.Year).Where(x => String.Compare(x.Year, year) <= 0).Take(40).ToListAsync();
             return sortedData;
         }
         // PUT: api/SebmarketRisks/5

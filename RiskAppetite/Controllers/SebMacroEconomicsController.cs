@@ -71,16 +71,17 @@ namespace RiskAppetite.Controllers
 
         // Fetching Data of 40 years
         [HttpGet("GetSebMacroeconomicofFourtyYears")]
-        public async Task<ActionResult<IEnumerable<Sebmacroeconomic>>> GetSebMacroeconomicofFourtyYears()
+        public async Task<ActionResult<IEnumerable<Sebmacroeconomic>>> GetSebMacroeconomicofFourtyYears([FromQuery] string year)
         {
             if (_context.Sebmacroeconomics == null)
             {
                 return NotFound();
             }
 
-            var sortedData = await _context.Sebmacroeconomics.OrderByDescending(risk => risk.Year).Take(40).ToListAsync();
+            var sortedData = await _context.Sebmacroeconomics.OrderByDescending(risk => risk.Year).Where(x => String.Compare(x.Year, year) <= 0).Take(40).ToListAsync();
             return sortedData;
         }
+
         // PUT: api/Sebmacroeconomics/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]

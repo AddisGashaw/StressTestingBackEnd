@@ -1157,7 +1157,13 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.SebcreditRisk, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
@@ -1312,7 +1318,13 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.SebforcastedFinancialStatement, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
@@ -1467,7 +1479,13 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.SebliquidityRisk, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
@@ -1622,7 +1640,13 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.Sebmacroeconomic, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
@@ -1777,7 +1801,13 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.SebmarketRisk, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
