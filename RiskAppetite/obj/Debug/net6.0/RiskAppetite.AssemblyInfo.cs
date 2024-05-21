@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RiskAppetite")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de8ebfe4f71ed5b3f547be25f4253233ce02eada")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c415af7bc28268a0938b2990060804b92566d68")]
 [assembly: System.Reflection.AssemblyProductAttribute("RiskAppetite")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RiskAppetite")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

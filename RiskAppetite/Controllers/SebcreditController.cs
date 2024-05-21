@@ -68,6 +68,19 @@ namespace RiskAppetite.Controllers
 
             return CreditRisk;
         }
+
+        // Fetching Data of 40 years
+        [HttpGet("GetSebCreditofFourtyYears")]
+        public async Task<ActionResult<IEnumerable<SebcreditRisk>>> GetSebCreditofFourtyYears()
+        {
+            if (_context.SebcreditRisks == null)
+            {
+                return NotFound();
+            }
+
+            var sortedData = await _context.SebcreditRisks.OrderByDescending(risk => risk.Year).Take(40).ToListAsync();
+            return sortedData;
+        }
         // PUT: api/Sdbcredits/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
