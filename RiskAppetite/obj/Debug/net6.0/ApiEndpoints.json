@@ -295,6 +295,37 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "RiskAppetite.Controllers.MarketRisksController",
+    "Method": "GetSdbMarkrtByyearandQuarter",
+    "RelativePath": "api/MarketRisks/GetSdbMarkrtByyearandQuarter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "quarter",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.MarketRisk, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "RiskAppetite.Controllers.OprationalRisksController",
     "Method": "GetOprationalRisks",
     "RelativePath": "api/OprationalRisks",
@@ -404,9 +435,40 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "RiskAppetite.Controllers.RoleAssignation",
+    "ContainingType": "RiskAppetite.Controllers.OprationalRisksController",
+    "Method": "GetSdbOperationalByyearandQuarter",
+    "RelativePath": "api/OprationalRisks/GetSdbOperationalByyearandQuarter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "quarter",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.OprationalRisk, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.RoleAssignations",
     "Method": "RoleAssignment",
-    "RelativePath": "api/RoleAssignation",
+    "RelativePath": "api/RoleAssignations",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -529,6 +591,37 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "RiskAppetite.Controllers.SdbactualFinancialStatementsController",
+    "Method": "GetSdbActualFinancialByyearandQuarter",
+    "RelativePath": "api/SdbactualFinancialStatements/GetSdbActualFinancialStatmentByYearandQuarter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "quarter",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.SdbactualFinancialStatement, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "RiskAppetite.Controllers.SdbcreditsController",
     "Method": "GetSdbcredits",
     "RelativePath": "api/Sdbcredits",
@@ -638,6 +731,177 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "RiskAppetite.Controllers.SdbcreditsController",
+    "Method": "GetSdbCredittByyearandQuarter",
+    "RelativePath": "api/Sdbcredits/GetSdbCredittByyearandQuarter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "quarter",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.Sdbcredit, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SdbforcastFinancialStatmentsController",
+    "Method": "GetSdbforcastFinancialStatments",
+    "RelativePath": "api/SdbforcastFinancialStatments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.SdbforcastFinancialStatment, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SdbforcastFinancialStatmentsController",
+    "Method": "PostSdbforcastFinancialStatment",
+    "RelativePath": "api/SdbforcastFinancialStatments",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sdbforcastFinancialStatment",
+        "Type": "RiskAppetite.Models.SdbforcastFinancialStatment",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RiskAppetite.Models.SdbforcastFinancialStatment",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SdbforcastFinancialStatmentsController",
+    "Method": "GetSdbforcastFinancialStatment",
+    "RelativePath": "api/SdbforcastFinancialStatments/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RiskAppetite.Models.SdbforcastFinancialStatment",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SdbforcastFinancialStatmentsController",
+    "Method": "PutSdbforcastFinancialStatment",
+    "RelativePath": "api/SdbforcastFinancialStatments/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "sdbforcastFinancialStatment",
+        "Type": "RiskAppetite.Models.SdbforcastFinancialStatment",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SdbforcastFinancialStatmentsController",
+    "Method": "DeleteSdbforcastFinancialStatment",
+    "RelativePath": "api/SdbforcastFinancialStatments/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SdbforcastFinancialStatmentsController",
+    "Method": "GetSdbforcastByyearandQuarter",
+    "RelativePath": "api/SdbforcastFinancialStatments/GetSdbforcastByyearandQuarter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "quarter",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.SdbforcastFinancialStatment, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "RiskAppetite.Controllers.SdbliquiditiesController",
     "Method": "GetSdbliquidities",
     "RelativePath": "api/Sdbliquidities",
@@ -745,6 +1009,842 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SdbliquiditiesController",
+    "Method": "GetSdbLiquidityByyearandQuarter",
+    "RelativePath": "api/Sdbliquidities/GetSdbLiquidityByyearandQuarter",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "quarter",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.Sdbliquidity, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SebcreditController",
+    "Method": "GetSebcredits",
+    "RelativePath": "api/Sebcredit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.SebcreditRisk, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SebcreditController",
+    "Method": "PostSebcredit",
+    "RelativePath": "api/Sebcredit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sebcredit",
+        "Type": "RiskAppetite.Models.SebcreditRisk",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RiskAppetite.Models.SebcreditRisk",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SebcreditController",
+    "Method": "GetSebcredits",
+    "RelativePath": "api/Sebcredit/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RiskAppetite.Models.SebcreditRisk",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SebcreditController",
+    "Method": "PutSebcredit",
+    "RelativePath": "api/Sebcredit/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "sebcredit",
+        "Type": "RiskAppetite.Models.SebcreditRisk",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SebcreditController",
+    "Method": "DeleteSebcredit",
+    "RelativePath": "api/Sebcredit/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SebcreditController",
+    "Method": "GetSebCreditofFourtyYears",
+    "RelativePath": "api/Sebcredit/GetSebCreditofFourtyYears",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.SebcreditRisk, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SebcreditController",
+    "Method": "GetSebCredittByyear",
+    "RelativePath": "api/Sebcredit/GetSebCredittByyear",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.SebcreditRisk, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.Sebforcasted_financial_statmentController",
+    "Method": "GetSebforcastedFinancialStatements",
+    "RelativePath": "api/Sebforcasted_financial_statment",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.SebforcastedFinancialStatement, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.Sebforcasted_financial_statmentController",
+    "Method": "PostSebforcastedFinancialStatement",
+    "RelativePath": "api/Sebforcasted_financial_statment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sebforcastedFinancialStatement",
+        "Type": "RiskAppetite.Models.SebforcastedFinancialStatement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RiskAppetite.Models.SebforcastedFinancialStatement",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.Sebforcasted_financial_statmentController",
+    "Method": "GetSebforcastedFinancialStatements",
+    "RelativePath": "api/Sebforcasted_financial_statment/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RiskAppetite.Models.SebforcastedFinancialStatement",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.Sebforcasted_financial_statmentController",
+    "Method": "PutSebforcastedFinancialStatement",
+    "RelativePath": "api/Sebforcasted_financial_statment/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "sebforcastedFinancialStatement",
+        "Type": "RiskAppetite.Models.SebforcastedFinancialStatement",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.Sebforcasted_financial_statmentController",
+    "Method": "DeleteSebforcastedFinancialStatement",
+    "RelativePath": "api/Sebforcasted_financial_statment/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.Sebforcasted_financial_statmentController",
+    "Method": "GetSebForcasted_financial_statmentOfFourtyYears",
+    "RelativePath": "api/Sebforcasted_financial_statment/GetSebForcasted_financial_statmentOfFourtyYears",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.SebforcastedFinancialStatement, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.Sebforcasted_financial_statmentController",
+    "Method": "GetSebForcastedFinancialStatementtByyear",
+    "RelativePath": "api/Sebforcasted_financial_statment/GetSebForcastedFinancialStatementtByyear",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.SebforcastedFinancialStatement, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SebLiquidityController",
+    "Method": "GetSebliquidities",
+    "RelativePath": "api/SebLiquidity",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.SebliquidityRisk, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SebLiquidityController",
+    "Method": "PostSebliquidity",
+    "RelativePath": "api/SebLiquidity",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sebliquidity",
+        "Type": "RiskAppetite.Models.SebliquidityRisk",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RiskAppetite.Models.SebliquidityRisk",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SebLiquidityController",
+    "Method": "GetSebliquidities",
+    "RelativePath": "api/SebLiquidity/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RiskAppetite.Models.SebliquidityRisk",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SebLiquidityController",
+    "Method": "PutSebliquidity",
+    "RelativePath": "api/SebLiquidity/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "sebliquidity",
+        "Type": "RiskAppetite.Models.SebliquidityRisk",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SebLiquidityController",
+    "Method": "DeleteSebliquidity",
+    "RelativePath": "api/SebLiquidity/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SebLiquidityController",
+    "Method": "GetSebLiquidityofFourtyYears",
+    "RelativePath": "api/SebLiquidity/GetSebLiquidityofFourtyYears",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.SebliquidityRisk, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SebLiquidityController",
+    "Method": "GetSebLiquiditytByyear",
+    "RelativePath": "api/SebLiquidity/GetSebLiquiditytByyear",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.SebliquidityRisk, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SebMacroEconomicsController",
+    "Method": "GetSebmacroeconomics",
+    "RelativePath": "api/SebMacroEconomics",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.Sebmacroeconomic, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SebMacroEconomicsController",
+    "Method": "PostSebmacroeconomic",
+    "RelativePath": "api/SebMacroEconomics",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sebmacroeconomic",
+        "Type": "RiskAppetite.Models.Sebmacroeconomic",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RiskAppetite.Models.Sebmacroeconomic",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SebMacroEconomicsController",
+    "Method": "GetSebmacroeconomics",
+    "RelativePath": "api/SebMacroEconomics/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RiskAppetite.Models.Sebmacroeconomic",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SebMacroEconomicsController",
+    "Method": "PutSebmacroeconomic",
+    "RelativePath": "api/SebMacroEconomics/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "sebmacroeconomic",
+        "Type": "RiskAppetite.Models.Sebmacroeconomic",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SebMacroEconomicsController",
+    "Method": "DeleteSebmacroeconomic",
+    "RelativePath": "api/SebMacroEconomics/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SebMacroEconomicsController",
+    "Method": "GetSebMacroeconomicofFourtyYears",
+    "RelativePath": "api/SebMacroEconomics/GetSebMacroeconomicofFourtyYears",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.Sebmacroeconomic, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SebMacroEconomicsController",
+    "Method": "GetSebMacroeconomictByyear",
+    "RelativePath": "api/SebMacroEconomics/GetSebMacroeconomictByyear",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.Sebmacroeconomic, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SebMarketController",
+    "Method": "GetSebmarkets",
+    "RelativePath": "api/SebMarket",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.SebmarketRisk, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SebMarketController",
+    "Method": "PostSebmarket",
+    "RelativePath": "api/SebMarket",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sebmarket",
+        "Type": "RiskAppetite.Models.SebmarketRisk",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RiskAppetite.Models.SebmarketRisk",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SebMarketController",
+    "Method": "GetSebmarkets",
+    "RelativePath": "api/SebMarket/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RiskAppetite.Models.SebmarketRisk",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SebMarketController",
+    "Method": "PutSebmarket",
+    "RelativePath": "api/SebMarket/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "sebmarket",
+        "Type": "RiskAppetite.Models.SebmarketRisk",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SebMarketController",
+    "Method": "DeleteSebmarket",
+    "RelativePath": "api/SebMarket/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SebMarketController",
+    "Method": "GetSebMarketofFourtyYears",
+    "RelativePath": "api/SebMarket/GetSebMarketofFourtyYears",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.SebmarketRisk, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.SebMarketController",
+    "Method": "GetSebMarkettByyear",
+    "RelativePath": "api/SebMarket/GetSebMarkettByyear",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "year",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RiskAppetite.Models.SebmarketRisk, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "RiskAppetite.Controllers.AnalysisControllers.Severity",
