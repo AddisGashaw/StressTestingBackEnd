@@ -2085,6 +2085,110 @@
     ]
   },
   {
+    "ContainingType": "RiskAppetite.Controllers.AnalysisControllers.ShareAndGrowthForSEB",
+    "Method": "GetSebCredit",
+    "RelativePath": "api/ShareAndGrowthForSEB/GetsebforCredit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "years",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[RiskAppetite.Models.SebcreditRisk, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.AnalysisControllers.ShareAndGrowthForSEB",
+    "Method": "GetSebLiquidity",
+    "RelativePath": "api/ShareAndGrowthForSEB/GetsebLiquidity",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "years",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[RiskAppetite.Models.SebliquidityRisk, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.AnalysisControllers.ShareAndGrowthForSEB",
+    "Method": "GetsebMacroeconomics",
+    "RelativePath": "api/ShareAndGrowthForSEB/GetsebMacroeconomics",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "years",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[RiskAppetite.Models.Sebmacroeconomic, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RiskAppetite.Controllers.AnalysisControllers.ShareAndGrowthForSEB",
+    "Method": "GetsebMarket",
+    "RelativePath": "api/ShareAndGrowthForSEB/GetsebMarket",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "years",
+        "Type": "System.String[]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[RiskAppetite.Models.SebmarketRisk, RiskAppetite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "RiskAppetite.Controllers.UserProfile",
     "Method": "GetUserDetails",
     "RelativePath": "api/UserProfile",
