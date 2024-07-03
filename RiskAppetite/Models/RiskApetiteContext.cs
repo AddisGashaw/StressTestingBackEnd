@@ -21,6 +21,30 @@ public partial class RiskApetiteContext : DbContext
 
     public virtual DbSet<OprationalRisk> OprationalRisks { get; set; }
 
+    public virtual DbSet<RacreditCbenoor> RacreditCbenoors { get; set; }
+
+    public virtual DbSet<RacreditCbenoordistrict> RacreditCbenoordistricts { get; set; }
+
+    public virtual DbSet<RacreditCommonDenominator> RacreditCommonDenominators { get; set; }
+
+    public virtual DbSet<RacreditCorporate> RacreditCorporates { get; set; }
+
+    public virtual DbSet<RacreditRetail> RacreditRetails { get; set; }
+
+    public virtual DbSet<RacreditRtailDistrict> RacreditRtailDistricts { get; set; }
+
+    public virtual DbSet<RacreditWholesale> RacreditWholesales { get; set; }
+
+    public virtual DbSet<RacreditWholesaleDistrict> RacreditWholesaleDistricts { get; set; }
+
+    public virtual DbSet<Radepartment> Radepartments { get; set; }
+
+    public virtual DbSet<RariskLevel> RariskLevels { get; set; }
+
+    public virtual DbSet<RariskLevelCorporate> RariskLevelCorporates { get; set; }
+
+    public virtual DbSet<RauserProfile> RauserProfiles { get; set; }
+
     public virtual DbSet<Role> Roles { get; set; }
 
     public virtual DbSet<SdbactualFinancialStatement> SdbactualFinancialStatements { get; set; }
@@ -33,13 +57,19 @@ public partial class RiskApetiteContext : DbContext
 
     public virtual DbSet<SebactualFinancialStatement> SebactualFinancialStatements { get; set; }
 
+    public virtual DbSet<SebcreditModelEstimation> SebcreditModelEstimations { get; set; }
+
     public virtual DbSet<SebcreditRisk> SebcreditRisks { get; set; }
 
     public virtual DbSet<SebforcastedFinancialStatement> SebforcastedFinancialStatements { get; set; }
 
+    public virtual DbSet<SebliquidityModelEstimation> SebliquidityModelEstimations { get; set; }
+
     public virtual DbSet<SebliquidityRisk> SebliquidityRisks { get; set; }
 
     public virtual DbSet<Sebmacroeconomic> Sebmacroeconomics { get; set; }
+
+    public virtual DbSet<SebmarketModelEstimation> SebmarketModelEstimations { get; set; }
 
     public virtual DbSet<SebmarketRisk> SebmarketRisks { get; set; }
 
@@ -1135,6 +1165,1655 @@ public partial class RiskApetiteContext : DbContext
                 .HasColumnName("uploadedDate");
             entity.Property(e => e.UploaderUserId).HasColumnName("uploaderUserId");
             entity.Property(e => e.Year).HasMaxLength(50);
+        });
+
+        modelBuilder.Entity<RacreditCbenoor>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__RACredit__3214EC070136E9CC");
+
+            entity.ToTable("RACreditCBENOOR");
+
+            entity.Property(e => e.AccQuarter)
+                .HasMaxLength(50)
+                .HasColumnName("accQuarter");
+            entity.Property(e => e.AccYear)
+                .HasMaxLength(50)
+                .HasColumnName("accYear");
+            entity.Property(e => e.Approvalstatus).HasColumnName("approvalstatus");
+            entity.Property(e => e.ApprovedDate)
+                .HasColumnType("datetime")
+                .HasColumnName("approvedDate");
+            entity.Property(e => e.ApproverUserId).HasColumnName("approverUserId");
+            entity.Property(e => e.Credit18DaysArrearsPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_1_8_days_arrears_principal_outstanding_balance");
+            entity.Property(e => e.Credit829DaysArrearsPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_8_29_days_arrears_principal_outstanding_balance");
+            entity.Property(e => e.CreditAgriculturePrincipalOutstandingBalanceCbeNoor)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_agriculture_principal_outstanding_balance_cbe_noor");
+            entity.Property(e => e.CreditBuildingConPrincipalOutstandingBalanceCbeNoor)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_building_con_principal_outstanding_balance_cbe_noor");
+            entity.Property(e => e.CreditCentralRegionCbeNoorFinancingPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_central_region_cbe_noor_financing_principal_outstanding_balance");
+            entity.Property(e => e.CreditConsumerLoanPrincipalOutstandingBalanceCbeNoor)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_consumer_loan_principal_outstanding_balance_cbe_noor");
+            entity.Property(e => e.CreditDtsPrincipalOutstandingBalanceCbeNoor)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_dts_principal_outstanding_balance_cbe_noor");
+            entity.Property(e => e.CreditHeadOfficeCbeNoorFinancingPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_head_office_cbe_noor_financing_principal_outstanding_balance");
+            entity.Property(e => e.CreditIndustryPrincipalOutstandingBalanceCbeNoor)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_industry_principal_outstanding_balance_cbe_noor");
+            entity.Property(e => e.CreditIntTradePrincipalOutstandingBalanceCbeNoor)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_int_trade_principal_outstanding_balance_cbe_noor");
+            entity.Property(e => e.CreditLongTermFinancingsPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_long_term_financings_principal_outstanding_balance");
+            entity.Property(e => e.CreditMediumTermFinancingsPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_medium_term_financings_principal_outstanding_balance");
+            entity.Property(e => e.CreditMurabahaFinancingsPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_murabaha_financings_principal_outstanding_balance");
+            entity.Property(e => e.CreditNorthEastRegionCbeNoorFinancingPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_north_east_region_cbe_noor_financing_principal_outstanding_balance");
+            entity.Property(e => e.CreditNpfsPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_npfs_principal_outstanding_balance");
+            entity.Property(e => e.CreditQerdFinancingsPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_qerd_financings_principal_outstanding_balance");
+            entity.Property(e => e.CreditRetailFinancingsPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_retail_financings_principal_outstanding_balance");
+            entity.Property(e => e.CreditShortTermFinancingsPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_short_term_financings_principal_outstanding_balance");
+            entity.Property(e => e.CreditSouthWestRegionCbeNoorFinancingPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_south_west_region_cbe_noor_financing_principal_outstanding_balance");
+            entity.Property(e => e.CreditSpecialMentionPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_special_mention_principal_outstanding_balance");
+            entity.Property(e => e.CreditTop10CbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_top_10_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditTop20CbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_top_20_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditTop50CbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_top_50_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditWholesaleFinancingsPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_wholesale_financings_principal_outstanding_balance");
+            entity.Property(e => e.CreditZeroDaysArrearsPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_zero_days_arrears_principal_outstanding_balance");
+            entity.Property(e => e.Descriptions)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("descriptions");
+            entity.Property(e => e.History)
+                .IsUnicode(false)
+                .HasColumnName("history");
+            entity.Property(e => e.Statuses).HasColumnName("statuses");
+            entity.Property(e => e.UpdatedAt)
+                .HasColumnType("datetime")
+                .HasColumnName("updatedAt");
+            entity.Property(e => e.UpdatedBy)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("updatedBy");
+            entity.Property(e => e.UploadedDate)
+                .HasColumnType("datetime")
+                .HasColumnName("uploadedDate");
+            entity.Property(e => e.UploaderUserId).HasColumnName("uploaderUserId");
+        });
+
+        modelBuilder.Entity<RacreditCbenoordistrict>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__RACredit__3214EC079BD0846B");
+
+            entity.ToTable("RACreditCBENOORDistrict");
+
+            entity.Property(e => e.AccQuarter)
+                .HasMaxLength(50)
+                .HasColumnName("accQuarter");
+            entity.Property(e => e.AccYear)
+                .HasMaxLength(50)
+                .HasColumnName("accYear");
+            entity.Property(e => e.Approvalstatus).HasColumnName("approvalstatus");
+            entity.Property(e => e.ApprovedDate)
+                .HasColumnType("datetime")
+                .HasColumnName("approvedDate");
+            entity.Property(e => e.ApproverUserId).HasColumnName("approverUserId");
+            entity.Property(e => e.CreditAdamaDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_adama_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditAkakiKalityDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_akaki_kality_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditAmboDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_ambo_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditAradaDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_arada_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditAsselaDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_assela_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditBahirDarDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_bahir_dar_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditBaleRobeDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_bale_robe_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditBoleDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_bole_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditDebrebirihanDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_debrebirihan_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditDebremarkosDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_debremarkos_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditDessieDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_dessie_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditDillaDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_dilla_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditDireDawaDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_dire_dawa_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditGondarDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_gondar_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditGulleleDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_gullele_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditHawassaDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_hawassa_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditHossanaDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_hossana_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditJigjigaDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_jigjiga_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditJimmaDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_jimma_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditKirkosDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_kirkos_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditKolfeDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_kolfe_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditMegenagnaDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_megenagna_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditMekelleDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_mekelle_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditMerkatoDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_merkato_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditMetuDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_metu_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditNekempteDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_nekempte_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditNifasSilkDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_nifas_silk_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditSemeraDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_semera_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditShashemeneDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_shashemene_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditShireDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_shire_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditWolayitaDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_wolayita_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditWoldiyaDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_woldiya_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.CreditYekaDistrictCbeNoorPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_yeka_district_cbe_noor_principal_outstanding_balance");
+            entity.Property(e => e.Descriptions)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("descriptions");
+            entity.Property(e => e.History)
+                .IsUnicode(false)
+                .HasColumnName("history");
+            entity.Property(e => e.Statuses).HasColumnName("statuses");
+            entity.Property(e => e.UpdatedAt)
+                .HasColumnType("datetime")
+                .HasColumnName("updatedAt");
+            entity.Property(e => e.UpdatedBy)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("updatedBy");
+            entity.Property(e => e.UploadedDate)
+                .HasColumnType("datetime")
+                .HasColumnName("uploadedDate");
+            entity.Property(e => e.UploaderUserId).HasColumnName("uploaderUserId");
+        });
+
+        modelBuilder.Entity<RacreditCommonDenominator>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__RACredit__3214EC078390511E");
+
+            entity.ToTable("RACreditCommonDenominator");
+
+            entity.Property(e => e.AccQuarter)
+                .HasMaxLength(50)
+                .HasColumnName("accQuarter");
+            entity.Property(e => e.AccYear)
+                .HasMaxLength(50)
+                .HasColumnName("accYear");
+            entity.Property(e => e.Approvalstatus).HasColumnName("approvalstatus");
+            entity.Property(e => e.ApprovedDate)
+                .HasColumnType("datetime")
+                .HasColumnName("approvedDate");
+            entity.Property(e => e.ApproverUserId).HasColumnName("approverUserId");
+            entity.Property(e => e.CreditTotalCapital)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_total_capital");
+            entity.Property(e => e.CreditTotalCbeNoorPrincipalOutstandingBalanceWithMarkup)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_total_cbe_noor_principal_outstanding_balance_with_markup");
+            entity.Property(e => e.CreditTotalCentralRegionPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_total_central_region_principal_outstanding_balance");
+            entity.Property(e => e.CreditTotalLoansAndAdvancesPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_total_loans_and_advances_principal_outstanding_balance");
+            entity.Property(e => e.CreditTotalNorthEastRegionPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_total_north_east_region_principal_outstanding_balance");
+            entity.Property(e => e.CreditTotalNpfsPrincipalOutstandingBalanceOfCbeNoor)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_total_npfs_principal_outstanding_balance_of_cbe_noor");
+            entity.Property(e => e.CreditTotalNplsPrincipalOutstandingBalanceOfRetailBusiness)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_total_npls_principal_outstanding_balance_of_retail_business");
+            entity.Property(e => e.CreditTotalNplsPrincipalOutstandingBalanceOfTheBank)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_total_npls_principal_outstanding_balance_of_the_bank");
+            entity.Property(e => e.CreditTotalNplsPrincipalOutstandingBalanceOfWholesaleBusiness)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_total_npls_principal_outstanding_balance_of_wholesale_business");
+            entity.Property(e => e.CreditTotalPrivateLoansAndAdvancesPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_total_private_loans_and_advances_principal_outstanding_balance");
+            entity.Property(e => e.CreditTotalRetailLoansAndAdvancesPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_total_retail_loans_and_advances_principal_outstanding_balance");
+            entity.Property(e => e.CreditTotalSouthWestRegionPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_total_south_west_region_principal_outstanding_balance");
+            entity.Property(e => e.CreditTotalWholesaleLoansAndAdvancesPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_total_wholesale_loans_and_advances_principal_outstanding_balance");
+            entity.Property(e => e.Descriptions)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("descriptions");
+            entity.Property(e => e.History)
+                .IsUnicode(false)
+                .HasColumnName("history");
+            entity.Property(e => e.Statuses).HasColumnName("statuses");
+            entity.Property(e => e.UpdatedAt)
+                .HasColumnType("datetime")
+                .HasColumnName("updatedAt");
+            entity.Property(e => e.UpdatedBy)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("updatedBy");
+            entity.Property(e => e.UploadedDate)
+                .HasColumnType("datetime")
+                .HasColumnName("uploadedDate");
+            entity.Property(e => e.UploaderUserId).HasColumnName("uploaderUserId");
+        });
+
+        modelBuilder.Entity<RacreditCorporate>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__RACredit__3214EC07E595F571");
+
+            entity.ToTable("RACreditCorporate");
+
+            entity.Property(e => e.AccQuarter)
+                .HasMaxLength(50)
+                .HasColumnName("accQuarter");
+            entity.Property(e => e.AccYear)
+                .HasMaxLength(50)
+                .HasColumnName("accYear");
+            entity.Property(e => e.Approvalstatus).HasColumnName("approvalstatus");
+            entity.Property(e => e.ApprovedDate)
+                .HasColumnType("datetime")
+                .HasColumnName("approvedDate");
+            entity.Property(e => e.ApproverUserId).HasColumnName("approverUserId");
+            entity.Property(e => e.Credit18DaysArrearsPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_1_8_days_arrears_principal_outstanding_balance");
+            entity.Property(e => e.Credit829DaysArrearsPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_8_29_days_arrears_principal_outstanding_balance");
+            entity.Property(e => e.CreditAdvanceLoansPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_advance_loans_principal_outstanding_balance");
+            entity.Property(e => e.CreditAgriculturePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_agriculture_principal_outstanding_balance");
+            entity.Property(e => e.CreditAllRelatedPartiesPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_all_related_parties_principal_outstanding_balance");
+            entity.Property(e => e.CreditAnimalHusbandryPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_animal_husbandry_principal_outstanding_balance");
+            entity.Property(e => e.CreditBondsPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_bonds_principal_outstanding_balance");
+            entity.Property(e => e.CreditBuildingAndConstructionsPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_building_and_constructions_principal_outstanding_balance");
+            entity.Property(e => e.CreditCentralRegionPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_central_region_principal_outstanding_balance");
+            entity.Property(e => e.CreditConstructionOfBuildingsAndInfrastructureDevelopmentPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_construction_of_buildings_and_infrastructure_development_principal_outstanding_balance");
+            entity.Property(e => e.CreditConsumerLoanPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_consumer_loan_principal_outstanding_balance");
+            entity.Property(e => e.CreditDomesticTradeAndServicesPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_domestic_trade_and_services_principal_outstanding_balance");
+            entity.Property(e => e.CreditExportsPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_exports_principal_outstanding_balance");
+            entity.Property(e => e.CreditFinancialInstitutionsPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_financial_institutions_principal_outstanding_balance");
+            entity.Property(e => e.CreditHeadOfficePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_head_office_principal_outstanding_balance");
+            entity.Property(e => e.CreditHealthAndEducationPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_health_and_education_principal_outstanding_balance");
+            entity.Property(e => e.CreditHotelAndTourismPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_hotel_and_tourism_principal_outstanding_balance");
+            entity.Property(e => e.CreditIfbOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_ifb_outstanding_balance");
+            entity.Property(e => e.CreditImportsPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_imports_principal_outstanding_balance");
+            entity.Property(e => e.CreditIndustryPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_industry_principal_outstanding_balance");
+            entity.Property(e => e.CreditInternationalTradePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_international_trade_principal_outstanding_balance");
+            entity.Property(e => e.CreditLoansAndAdvancePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_loans_and_advance_principal_outstanding_balance");
+            entity.Property(e => e.CreditLoansToIfbCustomersPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_loans_to_ifb_customers_principal_outstanding_balance");
+            entity.Property(e => e.CreditLoansToRetailersPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_loans_to_retailers_principal_outstanding_balance");
+            entity.Property(e => e.CreditLoansToWholesalersPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_loans_to_wholesalers_principal_outstanding_balance");
+            entity.Property(e => e.CreditLongTermLoansPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_long_term_loans_principal_outstanding_balance");
+            entity.Property(e => e.CreditManufacturingOfCementsWoodAndPrintingsPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_manufacturing_of_cements_wood_and_printings_principal_outstanding_balance");
+            entity.Property(e => e.CreditManufacturingOfFoodAndBeveragePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_manufacturing_of_food_and_beverage_principal_outstanding_balance");
+            entity.Property(e => e.CreditManufacturingOfPlasticMetalAndMachineryEquipmentPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_manufacturing_of_plastic_metal_and_machinery_equipment_principal_outstanding_balance");
+            entity.Property(e => e.CreditManufacturingOfTextileChemicalsAndMedicalEquipmentPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_manufacturing_of_textile_chemicals_and_medical_equipment_principal_outstanding_balance");
+            entity.Property(e => e.CreditMediumTermLoansPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_medium_term_loans_principal_outstanding_balance");
+            entity.Property(e => e.CreditMerchandiseLoanPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_merchandise_loan_principal_outstanding_balance");
+            entity.Property(e => e.CreditMiningAndQuarryingPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_mining_and_quarrying_principal_outstanding_balance");
+            entity.Property(e => e.CreditNorthEastRegionPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_north_east_region_principal_outstanding_balance");
+            entity.Property(e => e.CreditNplsTotalPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_npls_total_principal_outstanding_balance");
+            entity.Property(e => e.CreditOneRelatedPartyPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_one_related_party_principal_outstanding_balance");
+            entity.Property(e => e.CreditOneSingleBorrowerUnrelatedToCbePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_one_single_borrower_unrelated_to_cbe_principal_outstanding_balance");
+            entity.Property(e => e.CreditOtherAgriculturePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_other_agriculture_principal_outstanding_balance");
+            entity.Property(e => e.CreditOtherBuildingsPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_other_buildings_principal_outstanding_balance");
+            entity.Property(e => e.CreditOtherManufacturingPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_other_manufacturing_principal_outstanding_balance");
+            entity.Property(e => e.CreditOtherServicesPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_other_services_principal_outstanding_balance");
+            entity.Property(e => e.CreditOthersPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_others_principal_outstanding_balance");
+            entity.Property(e => e.CreditOverdraftPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_overdraft_principal_outstanding_balance");
+            entity.Property(e => e.CreditPermanentCropsPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_permanent_crops_principal_outstanding_balance");
+            entity.Property(e => e.CreditRealEstatePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_real_estate_principal_outstanding_balance");
+            entity.Property(e => e.CreditShortTermLoansPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_short_term_loans_principal_outstanding_balance");
+            entity.Property(e => e.CreditSingleBorrowerUnrelatedToCbePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_single_borrower_unrelated_to_cbe_principal_outstanding_balance");
+            entity.Property(e => e.CreditSouthWestRegionPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_south_west_region_principal_outstanding_balance");
+            entity.Property(e => e.CreditSpecialMentionPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_special_mention_principal_outstanding_balance");
+            entity.Property(e => e.CreditTemporaryCropsPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_temporary_crops_principal_outstanding_balance");
+            entity.Property(e => e.CreditTermLoansPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_term_loans_principal_outstanding_balance");
+            entity.Property(e => e.CreditTop100BorrowersPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_top_100_borrowers_principal_outstanding_balance");
+            entity.Property(e => e.CreditTop10BorrowersPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_top_10_borrowers_principal_outstanding_balance");
+            entity.Property(e => e.CreditTop200BorrowersPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_top_200_borrowers_principal_outstanding_balance");
+            entity.Property(e => e.CreditTransportationAndCommunicationPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_transportation_and_communication_principal_outstanding_balance");
+            entity.Property(e => e.CreditWholesaleAndRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_wholesale_and_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditZeroDaysArrearsPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_zero_days_arrears_principal_outstanding_balance");
+            entity.Property(e => e.Descriptions)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("descriptions");
+            entity.Property(e => e.History)
+                .IsUnicode(false)
+                .HasColumnName("history");
+            entity.Property(e => e.Statuses).HasColumnName("statuses");
+            entity.Property(e => e.UpdatedAt)
+                .HasColumnType("datetime")
+                .HasColumnName("updatedAt");
+            entity.Property(e => e.UpdatedBy)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("updatedBy");
+            entity.Property(e => e.UploadedDate)
+                .HasColumnType("datetime")
+                .HasColumnName("uploadedDate");
+            entity.Property(e => e.UploaderUserId).HasColumnName("uploaderUserId");
+        });
+
+        modelBuilder.Entity<RacreditRetail>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__RACredit__3214EC07C8881420");
+
+            entity.ToTable("RACreditRetail");
+
+            entity.Property(e => e.AccQuarter)
+                .HasMaxLength(50)
+                .HasColumnName("accQuarter");
+            entity.Property(e => e.AccYear)
+                .HasMaxLength(50)
+                .HasColumnName("accYear");
+            entity.Property(e => e.Approvalstatus).HasColumnName("approvalstatus");
+            entity.Property(e => e.ApprovedDate)
+                .HasColumnType("datetime")
+                .HasColumnName("approvedDate");
+            entity.Property(e => e.ApproverUserId).HasColumnName("approverUserId");
+            entity.Property(e => e.Credit18DaysArrearsPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_1_8_days_arrears_principal_outstanding_balance");
+            entity.Property(e => e.Credit829DaysArrearsPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_8_29_days_arrears_principal_outstanding_balance");
+            entity.Property(e => e.CreditAffluentRetailCustomersPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_affluent_retail_customers_principal_outstanding_balance");
+            entity.Property(e => e.CreditCentralRegionRetailLoansPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_central_region_retail_loans_principal_outstanding_balance");
+            entity.Property(e => e.CreditHeadOfficeRetailLoansPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_head_office_retail_loans_principal_outstanding_balance");
+            entity.Property(e => e.CreditLongTermRetailLoansPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_long_term_retail_loans_principal_outstanding_balance");
+            entity.Property(e => e.CreditMassRetailCustomersPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_mass_retail_customers_principal_outstanding_balance");
+            entity.Property(e => e.CreditMediumTermRetailLoansPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_medium_term_retail_loans_principal_outstanding_balance");
+            entity.Property(e => e.CreditMiddleRetailCustomersPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_middle_retail_customers_principal_outstanding_balance");
+            entity.Property(e => e.CreditNorthEastRegionRetailLoansPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_north_east_region_retail_loans_principal_outstanding_balance");
+            entity.Property(e => e.CreditNplsRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_npls_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditOverdraftRetailLoansPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_overdraft_retail_loans_principal_outstanding_balance");
+            entity.Property(e => e.CreditRevolvingRetailCreditsPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_revolving_retail_credits_principal_outstanding_balance");
+            entity.Property(e => e.CreditShortTermRetailLoansPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_short_term_retail_loans_principal_outstanding_balance");
+            entity.Property(e => e.CreditSouthWestRegionRetailLoansPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_south_west_region_retail_loans_principal_outstanding_balance");
+            entity.Property(e => e.CreditSpecialMentionOSBPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_special_mention_o_s_b_principal_outstanding_balance");
+            entity.Property(e => e.CreditTermLoansRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_term_loans_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditZeroDaysArrearsPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_zero_days_arrears_principal_outstanding_balance");
+            entity.Property(e => e.Descriptions)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("descriptions");
+            entity.Property(e => e.History)
+                .IsUnicode(false)
+                .HasColumnName("history");
+            entity.Property(e => e.Statuses).HasColumnName("statuses");
+            entity.Property(e => e.UpdatedAt)
+                .HasColumnType("datetime")
+                .HasColumnName("updatedAt");
+            entity.Property(e => e.UpdatedBy)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("updatedBy");
+            entity.Property(e => e.UploadedDate)
+                .HasColumnType("datetime")
+                .HasColumnName("uploadedDate");
+            entity.Property(e => e.UploaderUserId).HasColumnName("uploaderUserId");
+        });
+
+        modelBuilder.Entity<RacreditRtailDistrict>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__RACredit__3214EC07C8EB7FE4");
+
+            entity.ToTable("RACreditRtailDistrict");
+
+            entity.Property(e => e.AccQuarter)
+                .HasMaxLength(50)
+                .HasColumnName("accQuarter");
+            entity.Property(e => e.AccYear)
+                .HasMaxLength(50)
+                .HasColumnName("accYear");
+            entity.Property(e => e.Approvalstatus).HasColumnName("approvalstatus");
+            entity.Property(e => e.ApprovedDate)
+                .HasColumnType("datetime")
+                .HasColumnName("approvedDate");
+            entity.Property(e => e.ApproverUserId).HasColumnName("approverUserId");
+            entity.Property(e => e.CreditAdamaDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_adama_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditAkakiKalityDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_akaki_kality_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditAmboDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_ambo_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditAradaDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_arada_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditAsselaDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_assela_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditBahirDarDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_bahir_dar_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditBaleRobeDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_bale_robe_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditBoleDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_bole_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditDebrebirihanDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_debrebirihan_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditDebremarkosDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_debremarkos_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditDessieDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_dessie_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditDillaDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_dilla_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditDireDawaDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_dire_dawa_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditGondarDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_gondar_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditGulleleDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_gullele_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditHawassaDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_hawassa_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditHossanaDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_hossana_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditJigjigaDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_jigjiga_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditJimmaDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_jimma_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditKirkosDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_kirkos_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditKolfeDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_kolfe_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditMegenagnaDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_megenagna_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditMekelleDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_mekelle_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditMerkatoDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_merkato_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditMetuDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_metu_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditNekempteDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_nekempte_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditNifasSilkDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_nifas_silk_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditSemeraDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_semera_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditShashemeneDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_shashemene_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditShireDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_shire_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditWolayitaDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_wolayita_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditWoldiyaDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_woldiya_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.CreditYekaDistrictDistrictRetailPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_yeka_district_district_retail_principal_outstanding_balance");
+            entity.Property(e => e.Descriptions)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("descriptions");
+            entity.Property(e => e.History)
+                .IsUnicode(false)
+                .HasColumnName("history");
+            entity.Property(e => e.Statuses).HasColumnName("statuses");
+            entity.Property(e => e.UpdatedAt)
+                .HasColumnType("datetime")
+                .HasColumnName("updatedAt");
+            entity.Property(e => e.UpdatedBy)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("updatedBy");
+            entity.Property(e => e.UploadedDate)
+                .HasColumnType("datetime")
+                .HasColumnName("uploadedDate");
+            entity.Property(e => e.UploaderUserId).HasColumnName("uploaderUserId");
+        });
+
+        modelBuilder.Entity<RacreditWholesale>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__RACredit__3214EC07E4F00BEF");
+
+            entity.ToTable("RACreditWholesale");
+
+            entity.Property(e => e.AccQuarter)
+                .HasMaxLength(50)
+                .HasColumnName("accQuarter");
+            entity.Property(e => e.AccYear)
+                .HasMaxLength(50)
+                .HasColumnName("accYear");
+            entity.Property(e => e.Approvalstatus).HasColumnName("approvalstatus");
+            entity.Property(e => e.ApprovedDate)
+                .HasColumnType("datetime")
+                .HasColumnName("approvedDate");
+            entity.Property(e => e.ApproverUserId).HasColumnName("approverUserId");
+            entity.Property(e => e.Credit0DaysArrearsWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_0_days_arrears_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.Credit18DaysArrearsWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_1_8_days_arrears_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.Credit829DaysArrearsWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_8_29_days_arrears_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditAdvanceLoansWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_advance_loans_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditAgriculturePrincipalOutstandingBalanceWholesale)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_agriculture_principal_outstanding_balance_wholesale");
+            entity.Property(e => e.CreditAnimalHusbandryPrincipalOutstandingBalanceWholesale)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_animal_husbandry_principal_outstanding_balance_wholesale");
+            entity.Property(e => e.CreditBuildingAndConPrincipalOutstandingBalanceWholesale)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_building_and_con_principal_outstanding_balance_wholesale");
+            entity.Property(e => e.CreditCentralRegionWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_central_region_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditConsNOfBldgAndInfraLDevTPrincipalOutstandingBalanceWholesale)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_cons_n_of_bldg_and_infra_l_dev_t_principal_outstanding_balance_wholesale");
+            entity.Property(e => e.CreditCorporateWholesaleCustomersPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_corporate_wholesale_customers_principal_outstanding_balance");
+            entity.Property(e => e.CreditDtsPrincipalOutstandingBalanceWholesale)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_dts_principal_outstanding_balance_wholesale");
+            entity.Property(e => e.CreditExportsPrincipalOutstandingBalanceWholesale)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_exports_principal_outstanding_balance_wholesale");
+            entity.Property(e => e.CreditFinancialInstPrincipalOutstandingBalanceWholesale)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_financial_inst_principal_outstanding_balance_wholesale");
+            entity.Property(e => e.CreditHeadOfficeWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_head_office_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditHealthAndEducationPrincipalOutstandingBalanceWholesale)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_health_and_education_principal_outstanding_balance_wholesale");
+            entity.Property(e => e.CreditHotelAndTourismPrincipalOutstandingBalanceWholesale)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_hotel_and_tourism_principal_outstanding_balance_wholesale");
+            entity.Property(e => e.CreditIfbWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_ifb_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditImportsPrincipalOutstandingBalanceWholesale)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_imports_principal_outstanding_balance_wholesale");
+            entity.Property(e => e.CreditIndustryPrincipalOutstandingBalanceWholesale)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_industry_principal_outstanding_balance_wholesale");
+            entity.Property(e => e.CreditIntTradePrincipalOutstandingBalanceWholesale)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_int_trade_principal_outstanding_balance_wholesale");
+            entity.Property(e => e.CreditLongTermWholesaleLoansPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_long_term_wholesale_loans_principal_outstanding_balance");
+            entity.Property(e => e.CreditManfGOfFoodAndBeveragePrincipalOutstandingBalanceWholesale)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_manf_g_of_food_and_beverage_principal_outstanding_balance_wholesale");
+            entity.Property(e => e.CreditMediumTermWholesaleLoansPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_medium_term_wholesale_loans_principal_outstanding_balance");
+            entity.Property(e => e.CreditMerchandizeLoanWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_merchandize_loan_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditMicroCustomersPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_micro_customers_principal_outstanding_balance");
+            entity.Property(e => e.CreditMiningAndQuarryingPrincipalOutstandingBalanceWholesale)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_mining_and_quarrying_principal_outstanding_balance_wholesale");
+            entity.Property(e => e.CreditMnfGOfTextileChemicalsAndMedEquipPrincipalOutstandingBalanceWholesale)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_mnf_g_of_textile_chemicals_and_med_equip_principal_outstanding_balance_wholesale");
+            entity.Property(e => e.CreditMnfgOfCementsWoodAndPrintingsPrincipalOutstandingBalanceWholesale)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_mnfg_of_cements_wood_and_printings_principal_outstanding_balance_wholesale");
+            entity.Property(e => e.CreditMnfgOfPlasticMetalAndMachEquipPrincipalOutstandingBalanceWholesale)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_mnfg_of_plastic_metal_and_mach_equip_principal_outstanding_balance_wholesale");
+            entity.Property(e => e.CreditNorthEastRegionWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_north_east_region_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditNplsWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_npls_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditOtherAgriculturePrincipalOutstandingBalanceWholesale)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_other_agriculture_principal_outstanding_balance_wholesale");
+            entity.Property(e => e.CreditOtherManufacturingPrincipalOutstandingBalanceWholesale)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_other_manufacturing_principal_outstanding_balance_wholesale");
+            entity.Property(e => e.CreditOtherServicesPrincipalOutstandingBalanceWholesale)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_other_services_principal_outstanding_balance_wholesale");
+            entity.Property(e => e.CreditOthersPrincipalOutstandingBalanceWholesale)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_others_principal_outstanding_balance_wholesale");
+            entity.Property(e => e.CreditOthersPrincipalOutstandingBalanceWholesales)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_others_principal_outstanding_balance_wholesales");
+            entity.Property(e => e.CreditOverdraftWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_overdraft_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditPermanentCropsPrincipalOutstandingBalanceWholesale)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_permanent_crops_principal_outstanding_balance_wholesale");
+            entity.Property(e => e.CreditPublicAndInstAlCustomersPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_public_and_inst_al_customers_principal_outstanding_balance");
+            entity.Property(e => e.CreditRealEstatePrincipalOutstandingBalanceWholesale)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_real_estate_principal_outstanding_balance_wholesale");
+            entity.Property(e => e.CreditShortTermWholesaleLoansPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_short_term_wholesale_loans_principal_outstanding_balance");
+            entity.Property(e => e.CreditSmeCustomersPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_sme_customers_principal_outstanding_balance");
+            entity.Property(e => e.CreditSouthWestRegionWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_south_west_region_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditSpecialMentionWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_special_mention_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditTemporaryCropsPrincipalOutstandingBalanceWholesale)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_temporary_crops_principal_outstanding_balance_wholesale");
+            entity.Property(e => e.CreditTermLoansWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_term_loans_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditTop100WholesaleBorrowersPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_top_100_wholesale_borrowers_principal_outstanding_balance");
+            entity.Property(e => e.CreditTop10WholesaleBorrowersPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_top_10_wholesale_borrowers_principal_outstanding_balance");
+            entity.Property(e => e.CreditTop200WholesaleBorrowersPrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_top_200_wholesale_borrowers_principal_outstanding_balance");
+            entity.Property(e => e.CreditTranspTAndCommNPrincipalOutstandingBalanceWholesale)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_transp_t_and_comm_n_principal_outstanding_balance_wholesale");
+            entity.Property(e => e.CreditWholesaleAndRetailPrincipalOutstandingBalanceWholesale)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_wholesale_and_retail_principal_outstanding_balance_wholesale");
+            entity.Property(e => e.Descriptions)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("descriptions");
+            entity.Property(e => e.History)
+                .IsUnicode(false)
+                .HasColumnName("history");
+            entity.Property(e => e.Statuses).HasColumnName("statuses");
+            entity.Property(e => e.UpdatedAt)
+                .HasColumnType("datetime")
+                .HasColumnName("updatedAt");
+            entity.Property(e => e.UpdatedBy)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("updatedBy");
+            entity.Property(e => e.UploadedDate)
+                .HasColumnType("datetime")
+                .HasColumnName("uploadedDate");
+            entity.Property(e => e.UploaderUserId).HasColumnName("uploaderUserId");
+        });
+
+        modelBuilder.Entity<RacreditWholesaleDistrict>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__RACredit__3214EC0733512C3E");
+
+            entity.ToTable("RACreditWholesaleDistrict");
+
+            entity.Property(e => e.AccQuarter)
+                .HasMaxLength(50)
+                .HasColumnName("accQuarter");
+            entity.Property(e => e.AccYear)
+                .HasMaxLength(50)
+                .HasColumnName("accYear");
+            entity.Property(e => e.Approvalstatus).HasColumnName("approvalstatus");
+            entity.Property(e => e.ApprovedDate)
+                .HasColumnType("datetime")
+                .HasColumnName("approvedDate");
+            entity.Property(e => e.ApproverUserId).HasColumnName("approverUserId");
+            entity.Property(e => e.CreditAdamaDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_adama_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditAkakiKalityDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_akaki_kality_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditAmboDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_ambo_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditAradaDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_arada_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditAsselaDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_assela_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditBahirDarDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_bahir_dar_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditBaleRobeDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_bale_robe_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditBoleDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_bole_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditDebrebirihanDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_debrebirihan_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditDebremarkosDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_debremarkos_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditDessieDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_dessie_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditDillaDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_dilla_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditDireDawaDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_dire_dawa_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditGondarDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_gondar_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditGulleleDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_gullele_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditHawassaDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_hawassa_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditHossanaDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_hossana_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditJigjigaDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_jigjiga_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditJimmaDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_jimma_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditKirkosDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_kirkos_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditKolfeDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_kolfe_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditMegenagnaDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_megenagna_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditMekelleDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_mekelle_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditMerkatoDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_merkato_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditMetuDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_metu_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditNekempteDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_nekempte_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditNifasSilkDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_nifas_silk_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditSemeraDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_semera_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditShashemeneDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_shashemene_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditShireDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_shire_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditWolayitaDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_wolayita_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditWoldiyaDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_woldiya_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.CreditYekaDistrictWholesalePrincipalOutstandingBalance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("credit_yeka_district_wholesale_principal_outstanding_balance");
+            entity.Property(e => e.Descriptions)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("descriptions");
+            entity.Property(e => e.History)
+                .IsUnicode(false)
+                .HasColumnName("history");
+            entity.Property(e => e.Statuses).HasColumnName("statuses");
+            entity.Property(e => e.UpdatedAt)
+                .HasColumnType("datetime")
+                .HasColumnName("updatedAt");
+            entity.Property(e => e.UpdatedBy)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("updatedBy");
+            entity.Property(e => e.UploadedDate)
+                .HasColumnType("datetime")
+                .HasColumnName("uploadedDate");
+            entity.Property(e => e.UploaderUserId).HasColumnName("uploaderUserId");
+        });
+
+        modelBuilder.Entity<Radepartment>(entity =>
+        {
+            entity.ToTable("RADepartment");
+
+            entity.Property(e => e.DepartmentName)
+                .HasMaxLength(150)
+                .IsUnicode(false);
+            entity.Property(e => e.Description).HasMaxLength(150);
+            entity.Property(e => e.History).IsUnicode(false);
+        });
+
+        modelBuilder.Entity<RariskLevel>(entity =>
+        {
+            entity.ToTable("RARiskLevels");
+
+            entity.Property(e => e.Description).HasColumnType("text");
+            entity.Property(e => e.History).IsUnicode(false);
+            entity.Property(e => e.Name)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.UpdatedAt).HasColumnType("datetime");
+        });
+
+        modelBuilder.Entity<RariskLevelCorporate>(entity =>
+        {
+            entity.ToTable("RARiskLevelCorporate");
+
+            entity.Property(e => e.AllRelatedPartiesAgainstCapital)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("all_related_parties_against_capital");
+            entity.Property(e => e.Description).HasColumnType("text");
+            entity.Property(e => e.Eight29DaysArrearsAgainstTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("eight_29_days_Arrears_against_Total_OSB");
+            entity.Property(e => e.History).IsUnicode(false);
+            entity.Property(e => e.NPlsAgainstTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("nPLs_against_Total_OSB");
+            entity.Property(e => e.One8DaysArrearsAgainstTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("one_8_days_Arrears_against_Total_OSB");
+            entity.Property(e => e.OneBorrowerAgainstCapital)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("one_Borrower_Against_Capital");
+            entity.Property(e => e.OneRelatedPartyAgainstCapital)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("one_related_party_against_capital");
+            entity.Property(e => e.Quarter)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("quarter");
+            entity.Property(e => e.RiskLevelId).HasColumnName("risk_LevelID");
+            entity.Property(e => e.ShareOfAdvanceLoansFromTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Advance_Loans_from_Total_OSB");
+            entity.Property(e => e.ShareOfAgricultureFromTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Share_of_Agriculture_from_Total_OSB");
+            entity.Property(e => e.ShareOfAnimalHusbandryFromAgriTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Share_of_Animal_Husbandry_from_Agri_Total_OSB");
+            entity.Property(e => e.ShareOfBondsFromTotalCredit)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Bonds_from_total_credit");
+            entity.Property(e => e.ShareOfBuildingAndConFromTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Share_of_Building_and_Con_from_Total_OSB");
+            entity.Property(e => e.ShareOfCentralRegionFromTheBanksTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Central_Region_From_the_Banks_Total_OSB");
+            entity.Property(e => e.ShareOfConsnOfBldgAndInfralDevtFromBldgAndConTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Consn_of_BLDG_and_Infral_Devt_from_BLDG_and_Con_Total_OSB");
+            entity.Property(e => e.ShareOfConsumerLoanFromTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Share_of_Consumer_loan_from_Total_OSB");
+            entity.Property(e => e.ShareOfDtsFromTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Share_of_DTS_From_Total_OSB");
+            entity.Property(e => e.ShareOfExportsFromIntTradeTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Exports_from_Int_Trade_Total_OSB");
+            entity.Property(e => e.ShareOfFinancialInstFromTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Share_of_Financial_Inst_from_Total_OSB");
+            entity.Property(e => e.ShareOfHeadofficeFromTheBanksTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Headoffice_From_the_Banks_Total_OSB");
+            entity.Property(e => e.ShareOfHealthAndEducationFromDtsTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Health_and_Education_from_DTS_Total_OSB");
+            entity.Property(e => e.ShareOfHotelAndTourismFromDtsTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Hotel_and_Tourism_from_DTS_Total_OSB");
+            entity.Property(e => e.ShareOfIfbFromTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_IFB_from_Total_OSB");
+            entity.Property(e => e.ShareOfImportsFromIntTradeTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Imports_from_Int_Trade_Total_OSB");
+            entity.Property(e => e.ShareOfIntTradeFromTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Share_of_Int_Trade_from_Total_OSB");
+            entity.Property(e => e.ShareOfLoansAndAdvanceFromTotalCredit)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Loans_and_Advance_from_total_credit");
+            entity.Property(e => e.ShareOfLoansToIfbCustomersFromTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Loans_to_IFB_customers_from_Total_OSB");
+            entity.Property(e => e.ShareOfLoansToRetailersFromTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Loans_to_Retailers_from_Total_OSB");
+            entity.Property(e => e.ShareOfLoansToWholesalersFromTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Loans_to_Wholesalers_from_Total_OSB");
+            entity.Property(e => e.ShareOfLongTermLoansFromTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Long_term_loans_from_Total_OSB");
+            entity.Property(e => e.ShareOfManfgOfFoodAndBeverageFromIndTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Manfg_of_Food_and_Beverage_From_Ind_Total_OSB");
+            entity.Property(e => e.ShareOfManufacturingFromTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Share_of_Manufacturing_from_Total_OSB");
+            entity.Property(e => e.ShareOfMediumTermLoansFromTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Medium_Term_loans_from_Total_OSB");
+            entity.Property(e => e.ShareOfMerchandizeLoanFromTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Merchandize_loan_from_Total_OSB");
+            entity.Property(e => e.ShareOfMiningAndQuarryingFromIndTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Mining_and_Quarrying_From_Ind_Total_OSB");
+            entity.Property(e => e.ShareOfMnfgOfCementsWoodAndPrintingsFromIndTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Mnfg_of_Cements_Wood_and_Printings_From_Ind_Total_OSB");
+            entity.Property(e => e.ShareOfMnfgOfPlasticMetalAndMachEquipFromIndTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Mnfg_of_Plastic_Metal_and_Mach_Equip_From_Ind_Total_OSB");
+            entity.Property(e => e.ShareOfMnfgOfTextileChemicalsAndMedEquipFromIndTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Mnfg_of_Textile_Chemicals_and_Med_Equip_From_Ind_Total_OSB");
+            entity.Property(e => e.ShareOfNorthEastRegionFromTheBanksTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_North_East_Region_From_the_Banks_Total_OSB");
+            entity.Property(e => e.ShareOfOtherAgricultureFromAgriTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Share_of_Other_Agriculture_from_Agri_Total_OSB");
+            entity.Property(e => e.ShareOfOtherManufacturingFromIndTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Other_Manufacturing_From_Ind_Total_OSB");
+            entity.Property(e => e.ShareOfOtherServicesFromDtsTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Other_Services_from_DTS_Total_OSB");
+            entity.Property(e => e.ShareOfOthersFromBldgAndConTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Others_from_BLDG_and_Con_Total_OSB");
+            entity.Property(e => e.ShareOfOthersFromTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Share_of_Others_from_Total_OSB");
+            entity.Property(e => e.ShareOfOverdraftFromTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Overdraft_from_Total_OSB");
+            entity.Property(e => e.ShareOfPermanentCropsFromAgriTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Share_of_Permanent_Crops_from_Agri_Total_OSB");
+            entity.Property(e => e.ShareOfRealEstateFromBldgAndConTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Real_estate_from_BLDG_and_Con_Total_OSB");
+            entity.Property(e => e.ShareOfShortTermLoansFromTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Short_Term_loans_from_Total_OSB");
+            entity.Property(e => e.ShareOfSouthWestRegionFromTheBanksTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_South_West_Region_From_the_Banks_Total_OSB");
+            entity.Property(e => e.ShareOfSpecialMentionFromTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Special_Mention_from_Total_OSB");
+            entity.Property(e => e.ShareOfTemporaryCropsFromAgriTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Share_of_Temporary_Crops_from_Agri_Total_OSB");
+            entity.Property(e => e.ShareOfTermLoansFromTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Term_loans_from_Total_OSB");
+            entity.Property(e => e.ShareOfTranspnAndCommnFromDtsTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Transpn_and_Commn_from_DTS_Total_OSB");
+            entity.Property(e => e.ShareOfWholesaleAndRetailFromDtsTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("share_of_Wholesale_and_Retail_from_DTS_Total_OSB");
+            entity.Property(e => e.SingleBorrowerAgainstCapital)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("single_Borrower_against_capital");
+            entity.Property(e => e.Top100PvtBorrowersAgainstTotalPvtOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("top_100_Pvt_borrowers_against_Total_Pvt_OSB");
+            entity.Property(e => e.Top10PvtBorrowersAgainstTotalPvtOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("top_10_Pvt_borrowers_against_Total_Pvt_OSB");
+            entity.Property(e => e.Top200PvtBorrowersAgainstTotalPvtOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("top_200_Pvt_borrowers_against_Total_Pvt_OSB");
+            entity.Property(e => e.UpdatedAt).HasColumnType("datetime");
+            entity.Property(e => e.Year)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("year");
+            entity.Property(e => e.ZeroDaysArrearsAgainstTotalOsb)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("zero_days_Arrears_against_Total_OSB");
+
+            entity.HasOne(d => d.RiskLevel).WithMany(p => p.RariskLevelCorporates)
+                .HasForeignKey(d => d.RiskLevelId)
+                .HasConstraintName("FK_RARiskLevelCorporate_RARiskLevels");
+        });
+
+        modelBuilder.Entity<RauserProfile>(entity =>
+        {
+            entity.ToTable("RAUserProfile");
+
+            entity.Property(e => e.DepartmentId).HasColumnName("DepartmentID");
+            entity.Property(e => e.Description).HasMaxLength(150);
+            entity.Property(e => e.EmployeeId).HasMaxLength(150);
+            entity.Property(e => e.History).IsUnicode(false);
+            entity.Property(e => e.UpdatedAt).HasColumnType("datetime");
+            entity.Property(e => e.UserEmail).HasMaxLength(150);
+
+            entity.HasOne(d => d.Department).WithMany(p => p.RauserProfiles)
+                .HasForeignKey(d => d.DepartmentId)
+                .HasConstraintName("FK_RAUserProfile_RADepartment");
+
+            entity.HasOne(d => d.UserRole).WithMany(p => p.RauserProfiles)
+                .HasForeignKey(d => d.UserRoleId)
+                .HasConstraintName("FK_RAUserProfile_Role");
         });
 
         modelBuilder.Entity<Role>(entity =>
@@ -2377,6 +4056,223 @@ public partial class RiskApetiteContext : DbContext
                 .IsUnicode(false);
         });
 
+        modelBuilder.Entity<SebcreditModelEstimation>(entity =>
+        {
+            entity.ToTable("SEBCreditModelEstimation");
+
+            entity.Property(e => e.Approvalstatus).HasColumnName("approvalstatus");
+            entity.Property(e => e.ApprovedDate)
+                .HasColumnType("datetime")
+                .HasColumnName("approvedDate");
+            entity.Property(e => e.ApproverUserId).HasColumnName("approverUserId");
+            entity.Property(e => e.CoAverageAnnualExchageRateGr)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Average_Annual_Exchage_rate_Gr");
+            entity.Property(e => e.CoBroadMoneyGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Broad_Money_Growth");
+            entity.Property(e => e.CoBroadMoneySupply)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Broad_Money_Supply");
+            entity.Property(e => e.CoBudgetDeficitGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Budget_Deficit_Growth");
+            entity.Property(e => e.CoConstant)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Constant");
+            entity.Property(e => e.CoCurrencyOutsideTheBankGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Currency_Outside_the_bank_Growth");
+            entity.Property(e => e.CoCurrentAccountBalGr)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Current_Account_Bal_Gr");
+            entity.Property(e => e.CoExchangeRateGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Exchange_rate_Growth");
+            entity.Property(e => e.CoExport)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Export");
+            entity.Property(e => e.CoGdpGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_GDP_Growth");
+            entity.Property(e => e.CoGovernmentExpenditureGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Government_Expenditure_Growth");
+            entity.Property(e => e.CoImport)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Import");
+            entity.Property(e => e.CoImportGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Import_Growth");
+            entity.Property(e => e.CoInflation)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Inflation");
+            entity.Property(e => e.CoInflationChange)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Inflation_Change");
+            entity.Property(e => e.CoLagDeposit)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Lag_Deposit");
+            entity.Property(e => e.CoLagExchangeRate)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Lag_Exchange_Rate");
+            entity.Property(e => e.CoLagLoanAndAdvance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Lag_Loan_and_Advance");
+            entity.Property(e => e.CoLagPd)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Lag_PD");
+            entity.Property(e => e.CoNplPoint)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_NPL_Point");
+            entity.Property(e => e.CoRealGdp)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Real_GDP");
+            entity.Property(e => e.CoTradeBalanceGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Trade_Balance_Growth");
+            entity.Property(e => e.CoTradeGr)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Trade_Gr");
+            entity.Property(e => e.Descriptions)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("descriptions");
+            entity.Property(e => e.History)
+                .IsUnicode(false)
+                .HasColumnName("history");
+            entity.Property(e => e.PtAverageAnnualExchageRateGr)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Average_Annual_Exchage_rate_Gr");
+            entity.Property(e => e.PtBroadMoneyGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Broad_Money_Growth");
+            entity.Property(e => e.PtBroadMoneySupply)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Broad_Money_Supply");
+            entity.Property(e => e.PtBudgetDeficitGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Budget_Deficit_Growth");
+            entity.Property(e => e.PtConstant)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Constant");
+            entity.Property(e => e.PtCurrencyOutsideTheBankGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Currency_Outside_the_bank_Growth");
+            entity.Property(e => e.PtCurrentAccountBalGr)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Current_Account_Bal_Gr");
+            entity.Property(e => e.PtExchangeRateGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Exchange_rate_Growth");
+            entity.Property(e => e.PtExport)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Export");
+            entity.Property(e => e.PtGdpGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_GDP_Growth");
+            entity.Property(e => e.PtGovernmentExpenditureGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Government_Expenditure_Growth");
+            entity.Property(e => e.PtImport)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Import");
+            entity.Property(e => e.PtImportGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Import_Growth");
+            entity.Property(e => e.PtInflation)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Inflation");
+            entity.Property(e => e.PtInflationChange)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Inflation_Change");
+            entity.Property(e => e.PtLagDeposit)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Lag_Deposit");
+            entity.Property(e => e.PtLagExchangeRate)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Lag_Exchange_Rate");
+            entity.Property(e => e.PtLagLoanAndAdvance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Lag_Loan_and_Advance");
+            entity.Property(e => e.PtLagPd)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Lag_PD");
+            entity.Property(e => e.PtNplPoint)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_NPL_Point");
+            entity.Property(e => e.PtRealGdp)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Real_GDP");
+            entity.Property(e => e.PtTradeBalanceGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Trade_Balance_Growth");
+            entity.Property(e => e.PtTradeGr)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Trade_Gr");
+            entity.Property(e => e.Quarter)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.Statuses).HasColumnName("statuses");
+            entity.Property(e => e.UpdatedAt)
+                .HasColumnType("datetime")
+                .HasColumnName("updatedAt");
+            entity.Property(e => e.UpdatedBy).HasColumnName("updatedBy");
+            entity.Property(e => e.UploadedDate)
+                .HasColumnType("datetime")
+                .HasColumnName("uploadedDate");
+            entity.Property(e => e.UploaderUserId).HasColumnName("uploaderUserId");
+            entity.Property(e => e.Year)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+        });
+
         modelBuilder.Entity<SebcreditRisk>(entity =>
         {
             entity.ToTable("SEBCredit_risk");
@@ -2736,6 +4632,223 @@ public partial class RiskApetiteContext : DbContext
             entity.Property(e => e.UploaderUserId).HasColumnName("uploaderUserId");
         });
 
+        modelBuilder.Entity<SebliquidityModelEstimation>(entity =>
+        {
+            entity.ToTable("SEBLiquidityModelEstimation");
+
+            entity.Property(e => e.Approvalstatus).HasColumnName("approvalstatus");
+            entity.Property(e => e.ApprovedDate)
+                .HasColumnType("datetime")
+                .HasColumnName("approvedDate");
+            entity.Property(e => e.ApproverUserId).HasColumnName("approverUserId");
+            entity.Property(e => e.CoAverageAnnualExchageRateGr)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Average_Annual_Exchage_rate_Gr");
+            entity.Property(e => e.CoBroadMoneyGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Broad_Money_Growth");
+            entity.Property(e => e.CoBroadMoneySupply)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Broad_Money_Supply");
+            entity.Property(e => e.CoBudgetDeficitGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Budget_Deficit_Growth");
+            entity.Property(e => e.CoConstant)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Constant");
+            entity.Property(e => e.CoCurrencyOutsideTheBankGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Currency_Outside_the_bank_Growth");
+            entity.Property(e => e.CoCurrentAccountBalGr)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Current_Account_Bal_Gr");
+            entity.Property(e => e.CoExchangeRateGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Exchange_rate_Growth");
+            entity.Property(e => e.CoExport)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Export");
+            entity.Property(e => e.CoGdpGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_GDP_Growth");
+            entity.Property(e => e.CoGovernmentExpenditureGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Government_Expenditure_Growth");
+            entity.Property(e => e.CoImport)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Import");
+            entity.Property(e => e.CoImportGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Import_Growth");
+            entity.Property(e => e.CoInflation)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Inflation");
+            entity.Property(e => e.CoInflationChange)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Inflation_Change");
+            entity.Property(e => e.CoLagDeposit)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Lag_Deposit");
+            entity.Property(e => e.CoLagExchangeRate)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Lag_Exchange_Rate");
+            entity.Property(e => e.CoLagLoanAndAdvance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Lag_Loan_and_Advance");
+            entity.Property(e => e.CoLagPd)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Lag_PD");
+            entity.Property(e => e.CoNplPoint)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_NPL_Point");
+            entity.Property(e => e.CoRealGdp)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Real_GDP");
+            entity.Property(e => e.CoTradeBalanceGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Trade_Balance_Growth");
+            entity.Property(e => e.CoTradeGr)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Trade_Gr");
+            entity.Property(e => e.Descriptions)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("descriptions");
+            entity.Property(e => e.History)
+                .IsUnicode(false)
+                .HasColumnName("history");
+            entity.Property(e => e.PtAverageAnnualExchageRateGr)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Average_Annual_Exchage_rate_Gr");
+            entity.Property(e => e.PtBroadMoneyGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Broad_Money_Growth");
+            entity.Property(e => e.PtBroadMoneySupply)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Broad_Money_Supply");
+            entity.Property(e => e.PtBudgetDeficitGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Budget_Deficit_Growth");
+            entity.Property(e => e.PtConstant)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Constant");
+            entity.Property(e => e.PtCurrencyOutsideTheBankGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Currency_Outside_the_bank_Growth");
+            entity.Property(e => e.PtCurrentAccountBalGr)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Current_Account_Bal_Gr");
+            entity.Property(e => e.PtExchangeRateGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Exchange_rate_Growth");
+            entity.Property(e => e.PtExport)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Export");
+            entity.Property(e => e.PtGdpGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_GDP_Growth");
+            entity.Property(e => e.PtGovernmentExpenditureGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Government_Expenditure_Growth");
+            entity.Property(e => e.PtImport)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Import");
+            entity.Property(e => e.PtImportGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Import_Growth");
+            entity.Property(e => e.PtInflation)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Inflation");
+            entity.Property(e => e.PtInflationChange)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Inflation_Change");
+            entity.Property(e => e.PtLagDeposit)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Lag_Deposit");
+            entity.Property(e => e.PtLagExchangeRate)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Lag_Exchange_Rate");
+            entity.Property(e => e.PtLagLoanAndAdvance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Lag_Loan_and_Advance");
+            entity.Property(e => e.PtLagPd)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Lag_PD");
+            entity.Property(e => e.PtNplPoint)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_NPL_Point");
+            entity.Property(e => e.PtRealGdp)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Real_GDP");
+            entity.Property(e => e.PtTradeBalanceGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Trade_Balance_Growth");
+            entity.Property(e => e.PtTradeGr)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Trade_Gr");
+            entity.Property(e => e.Quarter)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.Statuses).HasColumnName("statuses");
+            entity.Property(e => e.UpdatedAt)
+                .HasColumnType("datetime")
+                .HasColumnName("updatedAt");
+            entity.Property(e => e.UpdatedBy).HasColumnName("updatedBy");
+            entity.Property(e => e.UploadedDate)
+                .HasColumnType("datetime")
+                .HasColumnName("uploadedDate");
+            entity.Property(e => e.UploaderUserId).HasColumnName("uploaderUserId");
+            entity.Property(e => e.Year)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+        });
+
         modelBuilder.Entity<SebliquidityRisk>(entity =>
         {
             entity.ToTable("SEBLiquidity_Risk");
@@ -2844,6 +4957,223 @@ public partial class RiskApetiteContext : DbContext
                 .HasColumnName("uploadedDate");
             entity.Property(e => e.UploaderUserId).HasColumnName("uploaderUserId");
             entity.Property(e => e.Year).HasMaxLength(50);
+        });
+
+        modelBuilder.Entity<SebmarketModelEstimation>(entity =>
+        {
+            entity.ToTable("SEBMarketModelEstimation");
+
+            entity.Property(e => e.Approvalstatus).HasColumnName("approvalstatus");
+            entity.Property(e => e.ApprovedDate)
+                .HasColumnType("datetime")
+                .HasColumnName("approvedDate");
+            entity.Property(e => e.ApproverUserId).HasColumnName("approverUserId");
+            entity.Property(e => e.CoAverageAnnualExchageRateGr)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Average_Annual_Exchage_rate_Gr");
+            entity.Property(e => e.CoBroadMoneyGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Broad_Money_Growth");
+            entity.Property(e => e.CoBroadMoneySupply)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Broad_Money_Supply");
+            entity.Property(e => e.CoBudgetDeficitGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Budget_Deficit_Growth");
+            entity.Property(e => e.CoConstant)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Constant");
+            entity.Property(e => e.CoCurrencyOutsideTheBankGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Currency_Outside_the_bank_Growth");
+            entity.Property(e => e.CoCurrentAccountBalGr)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Current_Account_Bal_Gr");
+            entity.Property(e => e.CoExchangeRateGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Exchange_rate_Growth");
+            entity.Property(e => e.CoExport)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Export");
+            entity.Property(e => e.CoGdpGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_GDP_Growth");
+            entity.Property(e => e.CoGovernmentExpenditureGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Government_Expenditure_Growth");
+            entity.Property(e => e.CoImport)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Import");
+            entity.Property(e => e.CoImportGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Import_Growth");
+            entity.Property(e => e.CoInflation)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Inflation");
+            entity.Property(e => e.CoInflationChange)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Inflation_Change");
+            entity.Property(e => e.CoLagDeposit)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Lag_Deposit");
+            entity.Property(e => e.CoLagExchangeRate)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Lag_Exchange_Rate");
+            entity.Property(e => e.CoLagLoanAndAdvance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Lag_Loan_and_Advance");
+            entity.Property(e => e.CoLagPd)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Lag_PD");
+            entity.Property(e => e.CoNplPoint)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_NPL_Point");
+            entity.Property(e => e.CoRealGdp)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Real_GDP");
+            entity.Property(e => e.CoTradeBalanceGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Trade_Balance_Growth");
+            entity.Property(e => e.CoTradeGr)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Co_Trade_Gr");
+            entity.Property(e => e.Descriptions)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("descriptions");
+            entity.Property(e => e.History)
+                .IsUnicode(false)
+                .HasColumnName("history");
+            entity.Property(e => e.PtAverageAnnualExchageRateGr)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Average_Annual_Exchage_rate_Gr");
+            entity.Property(e => e.PtBroadMoneyGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Broad_Money_Growth");
+            entity.Property(e => e.PtBroadMoneySupply)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Broad_Money_Supply");
+            entity.Property(e => e.PtBudgetDeficitGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Budget_Deficit_Growth");
+            entity.Property(e => e.PtConstant)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Constant");
+            entity.Property(e => e.PtCurrencyOutsideTheBankGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Currency_Outside_the_bank_Growth");
+            entity.Property(e => e.PtCurrentAccountBalGr)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Current_Account_Bal_Gr");
+            entity.Property(e => e.PtExchangeRateGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Exchange_rate_Growth");
+            entity.Property(e => e.PtExport)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Export");
+            entity.Property(e => e.PtGdpGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_GDP_Growth");
+            entity.Property(e => e.PtGovernmentExpenditureGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Government_Expenditure_Growth");
+            entity.Property(e => e.PtImport)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Import");
+            entity.Property(e => e.PtImportGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Import_Growth");
+            entity.Property(e => e.PtInflation)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Inflation");
+            entity.Property(e => e.PtInflationChange)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Inflation_Change");
+            entity.Property(e => e.PtLagDeposit)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Lag_Deposit");
+            entity.Property(e => e.PtLagExchangeRate)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Lag_Exchange_Rate");
+            entity.Property(e => e.PtLagLoanAndAdvance)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Lag_Loan_and_Advance");
+            entity.Property(e => e.PtLagPd)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Lag_PD");
+            entity.Property(e => e.PtNplPoint)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_NPL_Point");
+            entity.Property(e => e.PtRealGdp)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Real_GDP");
+            entity.Property(e => e.PtTradeBalanceGrowth)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Trade_Balance_Growth");
+            entity.Property(e => e.PtTradeGr)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("Pt_Trade_Gr");
+            entity.Property(e => e.Quarter)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.Statuses).HasColumnName("statuses");
+            entity.Property(e => e.UpdatedAt)
+                .HasColumnType("datetime")
+                .HasColumnName("updatedAt");
+            entity.Property(e => e.UpdatedBy).HasColumnName("updatedBy");
+            entity.Property(e => e.UploadedDate)
+                .HasColumnType("datetime")
+                .HasColumnName("uploadedDate");
+            entity.Property(e => e.UploaderUserId).HasColumnName("uploaderUserId");
+            entity.Property(e => e.Year)
+                .HasMaxLength(50)
+                .IsUnicode(false);
         });
 
         modelBuilder.Entity<SebmarketRisk>(entity =>

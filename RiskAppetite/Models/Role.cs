@@ -17,5 +17,7 @@ public partial class Role
 
     public string? UpdatedBy { get; set; }
 
+    public virtual ICollection<RauserProfile> RauserProfiles { get; set; } = new List<RauserProfile>();
+
     public virtual ICollection<UserProfile> UserProfiles { get; set; } = new List<UserProfile>();
 }

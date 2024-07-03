@@ -81,17 +81,38 @@ namespace RiskAppetite.Services.ExcelUpload
                     DateTime updatedDate = DateTime.UtcNow;
                     int approverUserId = 1; // Replace with the actual value
                     int approvalstatus = 0; // Replace with the actual value
+                    int rowsWithValue = 0;
 
                     // Add rows to DataTable with values from the Excel file and constant values for other columns
                     for (int row = 2; row <= rowCount; row++)
                     {
                         DataRow dataRow = dataTable.NewRow();
+                        // Create a dictionary to store the row data with headers
+                        Dictionary<string, object> rowData = new Dictionary<string, object>();
+                        bool hasValue = false;
+
                         for (int col = 1; col <= headerColumnCount; col++)
                         {
                             string columnName = dataTable.Columns[col - 1].ColumnName;
-                            object cellvalue=worksheet.Cells[row, col].Value;
-                            dataRow[columnName] = (cellvalue!=null)? cellvalue.ToString() : null;
-                           
+                            object cellvalue = worksheet.Cells[row, col].Value;
+                            dataRow[columnName] = (cellvalue != null) ? cellvalue.ToString() : null;
+                            rowData[columnName] = (cellvalue != null) ? cellvalue.ToString() : null;
+                            if (cellvalue != null)
+                            {
+                                hasValue = true;
+                            }
+                        }
+                        if (hasValue)
+                        {
+                            rowsWithValue++;
+                        }
+                        else
+                        {
+                            // Check if the next row is also null, and if so, break the loop
+                            if (row + 1 <= rowCount && worksheet.Cells[row + 1, 1].Value == null)
+                            {
+                                break;
+                            }
                         }
 
                         dataRow["uploaderUserId"] = uploaderUserId;
