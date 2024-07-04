@@ -26,6 +26,7 @@ builder.Services.AddScoped<IRoleAssignation, RoleAssignation>();
 builder.Services.AddScoped<IExcelUpload, ExcelUpload>();
 builder.Services.AddScoped<IUserProfile, UserProfileSer>();
 builder.Services.AddScoped<IShareAndGrowth, ShareAndGrowthClass>();
+builder.Services.AddScoped<IShareAndGrowth_SEB, ShareAndGrowth_SEB>();
 builder.Services.AddScoped<ISeverity, SeverityClass>();
 builder.Services.AddScoped<IAssumption, Assumption>();
 
