@@ -24,10 +24,10 @@ namespace RiskAppetite.Controllers.AnalysisControllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SebmarketModelEstimation>>> GetSebmarketModelEstimations()
         {
-          if (_context.SebmarketModelEstimations == null)
-          {
-              return NotFound();
-          }
+            if (_context.SebmarketModelEstimations == null)
+            {
+                return NotFound();
+            }
             return await _context.SebmarketModelEstimations.ToListAsync();
         }
 
@@ -35,10 +35,10 @@ namespace RiskAppetite.Controllers.AnalysisControllers
         [HttpGet("{id}")]
         public async Task<ActionResult<SebmarketModelEstimation>> GetSebmarketModelEstimation(int id)
         {
-          if (_context.SebmarketModelEstimations == null)
-          {
-              return NotFound();
-          }
+            if (_context.SebmarketModelEstimations == null)
+            {
+                return NotFound();
+            }
             var sebmarketModelEstimation = await _context.SebmarketModelEstimations.FindAsync(id);
 
             if (sebmarketModelEstimation == null)
@@ -111,10 +111,10 @@ namespace RiskAppetite.Controllers.AnalysisControllers
         [HttpPost]
         public async Task<ActionResult<SebmarketModelEstimation>> PostSebmarketModelEstimation(SebmarketModelEstimation sebmarketModelEstimation)
         {
-          if (_context.SebmarketModelEstimations == null)
-          {
-              return Problem("Entity set 'RiskApetiteContext.SebmarketModelEstimations'  is null.");
-          }
+            if (_context.SebmarketModelEstimations == null)
+            {
+                return Problem("Entity set 'RiskApetiteContext.SebmarketModelEstimations'  is null.");
+            }
             _context.SebmarketModelEstimations.Add(sebmarketModelEstimation);
             await _context.SaveChangesAsync();
 
@@ -177,4 +177,5 @@ namespace RiskAppetite.Controllers.AnalysisControllers
                     return null;
             }
         }
+    }
 }

@@ -95,31 +95,16 @@ namespace RiskAppetite.Controllers.AnalysisControllers
             return CreatedAtAction("GetSebliquidityModelEstimation", new { id = sebliquidityModelEstimation.Id }, sebliquidityModelEstimation);
         }
         [HttpGet("SebliquidityModelEstimation")]
-        public async Task<ActionResult<IEnumerable<SebliquidityModelEstimation>>> GetLiquidityEstimation(string year, string quarter)
+        public async Task<ActionResult<IEnumerable<SebliquidityModelEstimation>>> GetLiquidityEstimation(string year)
         {
             if (_context.SebliquidityModelEstimations == null)
             {
                 return NotFound();
             }
-            int quarterValue = ConvertRomanToArabic(quarter);
-            var liquidityEstimation = new List<SebliquidityModelEstimation>();
-
-            for (int i = quarterValue; i >= 1; i--)
-            {
-                var presentQuarter = ConvertNumberToArabic(i);
-                var data = await _context.SebliquidityModelEstimations
-                    .Where(x => x.Year == year && x.Quarter == presentQuarter)
-                    .ToListAsync();
-
-                if (data.Any())
-                {
-                    liquidityEstimation.AddRange(data);
-                    break;
-                }
-            }
-
-
-            return Ok(liquidityEstimation);
+            var data = await _context.SebliquidityModelEstimations
+                   .Where(x => x.Year == year)
+                   .ToListAsync();
+            return Ok(data);
         }
         // DELETE: api/SebliquidityModelEstimations/5
         [HttpDelete("{id}")]
@@ -145,37 +130,6 @@ namespace RiskAppetite.Controllers.AnalysisControllers
         {
             return (_context.SebliquidityModelEstimations?.Any(e => e.Id == id)).GetValueOrDefault();
         }
-        public static int ConvertRomanToArabic(string Quarter)
-        {
-            switch (Quarter)
-            {
-                case "QI":
-                    return 1;
-                case "QII":
-                    return 2;
-                case "QIII":
-                    return 3;
-                case "QIV":
-                    return 4;
-                default:
-                    return -1;
-            }
-        }
-        public static string ConvertNumberToArabic(int Quarter)
-        {
-            switch (Quarter)
-            {
-                case 1:
-                    return "QI";
-                case 2:
-                    return "QII";
-                case 3:
-                    return "QIII";
-                case 4:
-                    return "QIV";
-                default:
-                    return null;
-            }
-        }
+       
     }
 }
