@@ -11,21 +11,9 @@ public partial class SdbactualFinancialStatement
 
     public string? Quarter { get; set; }
 
-    public string? OffBsLetterOfCredit { get; set; }
-
-    public string? OffBsLoansAndBondCom { get; set; }
-
-    public string? OffBsLoansAndBondComGuarantedByCentralGov { get; set; }
-
-    public string? OffBsLoansComGuarnateedByRegionalGov { get; set; }
-
-    public string? OffBsBidBondsPerformanceBonds { get; set; }
-
-    public string? TotalOffBSheetRwa { get; set; }
-
     public string? LoansAndAdvancesInterestIncome { get; set; }
 
-    public string? BondsSecuritiesInterestIncome { get; set; }
+    public string? BondsAndSecuritiesInterestIncome { get; set; }
 
     public string? CommissionAndChargesIncome { get; set; }
 
@@ -37,19 +25,19 @@ public partial class SdbactualFinancialStatement
 
     public string? InterestExpense { get; set; }
 
-    public string? ProfitPaidToCbeNoorDeposit { get; set; }
+    public string? ProfitPaidCbeNoorDeposit { get; set; }
 
     public string? EmployeesSalaries { get; set; }
 
     public string? EmployeesBenefits { get; set; }
 
-    public string? EmployeesProvisions { get; set; }
+    public string? EmployeesProvissions { get; set; }
 
     public string? GeneralExpenses { get; set; }
 
     public string? LossOnFx { get; set; }
 
-    public string? ImpairmentOnFinancialAssets { get; set; }
+    public string? ImpairmrntOnFinancialAssets { get; set; }
 
     public string? ProfitLossBeforeTaxation { get; set; }
 
@@ -93,9 +81,11 @@ public partial class SdbactualFinancialStatement
 
     public string? Provisions { get; set; }
 
-    public string? BorrowingOrNationalBankLiabilities { get; set; }
+    public string? BorrowingNationalBankLiabilities { get; set; }
 
     public string? OtherLiabilities { get; set; }
+
+    public string? Equity { get; set; }
 
     public string? Capital { get; set; }
 
@@ -109,7 +99,7 @@ public partial class SdbactualFinancialStatement
 
     public string? RegulatoryImpairmentReserve { get; set; }
 
-    public string? ProvisionalProfitOrLoss { get; set; }
+    public string? ProvisionalProfitLoss { get; set; }
 
     public int? UploaderUserId { get; set; }
 

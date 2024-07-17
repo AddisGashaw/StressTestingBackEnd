@@ -24,10 +24,10 @@ namespace RiskAppetite.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SdbactualFinancialStatement>>> GetSdbactualFinancialStatements()
         {
-          if (_context.SdbactualFinancialStatements == null)
-          {
-              return NotFound();
-          }
+            if (_context.SdbactualFinancialStatements == null)
+            {
+                return NotFound();
+            }
             return await _context.SdbactualFinancialStatements.ToListAsync();
         }
 
@@ -35,10 +35,10 @@ namespace RiskAppetite.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<SdbactualFinancialStatement>> GetSdbactualFinancialStatement(int id)
         {
-          if (_context.SdbactualFinancialStatements == null)
-          {
-              return NotFound();
-          }
+            if (_context.SdbactualFinancialStatements == null)
+            {
+                return NotFound();
+            }
             var sdbactualFinancialStatement = await _context.SdbactualFinancialStatements.FindAsync(id);
 
             if (sdbactualFinancialStatement == null)
@@ -52,14 +52,14 @@ namespace RiskAppetite.Controllers
         // PUT: api/SdbactualFinancialStatements/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutSdbactualFinancialStatement(int id, SdbactualFinancialStatement sdbactualFinancialStatement)
+        public async Task<IActionResult> PutSdbactualFinancialStatement(int id, SdbactualFinancialStatement SdbactualFinancialStatement)
         {
-            if (id != sdbactualFinancialStatement.Id)
+            if (id != SdbactualFinancialStatement.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(sdbactualFinancialStatement).State = EntityState.Modified;
+            _context.Entry(SdbactualFinancialStatement).State = EntityState.Modified;
 
             try
             {
@@ -83,16 +83,16 @@ namespace RiskAppetite.Controllers
         // POST: api/SdbactualFinancialStatements
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<SdbactualFinancialStatement>> PostSdbactualFinancialStatement(SdbactualFinancialStatement sdbactualFinancialStatement)
+        public async Task<ActionResult<SdbactualFinancialStatement>> PostSdbactualFinancialStatement(SdbactualFinancialStatement SdbactualFinancialStatement)
         {
-          if (_context.SdbactualFinancialStatements == null)
-          {
-              return Problem("Entity set 'RiskApetiteContext.SdbactualFinancialStatements'  is null.");
-          }
-            _context.SdbactualFinancialStatements.Add(sdbactualFinancialStatement);
+            if (_context.SdbactualFinancialStatements == null)
+            {
+                return Problem("Entity set 'RiskApetiteContext.SdbactualFinancialStatements'  is null.");
+            }
+            _context.SdbactualFinancialStatements.Add(SdbactualFinancialStatement);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetSdbactualFinancialStatement", new { id = sdbactualFinancialStatement.Id }, sdbactualFinancialStatement);
+            return CreatedAtAction("GetSdbactualFinancialStatement", new { id = SdbactualFinancialStatement.Id }, SdbactualFinancialStatement);
         }
 
         // DELETE: api/SdbactualFinancialStatements/5
@@ -125,7 +125,7 @@ namespace RiskAppetite.Controllers
 
             if (SdbactualFinancial == null)
             {
-                return NotFound();
+            return NotFound();
             }
 
             return SdbactualFinancial;

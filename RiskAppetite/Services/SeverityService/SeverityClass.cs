@@ -60,19 +60,45 @@ namespace RiskAppetite.Services.SeverityService
             return _mapper.Map<IEnumerable<SeverityReadDto>>(SeverityList);
         }
 
+        //public async Task<IEnumerable<SeverityReadDto>> GetSeverityByYearAndQuarter(string year, string quarter, int id)
+        //{
+        //    var severities = await _context.SeverityForAnalyses.Include(q=>q.SeverityCat)
+        //        .Where(s => s.Year == year && s.Quarter == quarter && s.SeverityCatId==id)
+        //        .ToListAsync();
+
+        //    if (severities.Count == 0)
+        //    {
+        //        throw new DataNotFoundException($"No severities found for year {year} and quarter {quarter}.");
+        //    }
+
+        //    // var severityDetail = _mapper.Map<IEnumerable<SeverityReadDto>>(severities);
+        //    return _mapper.Map<IEnumerable<SeverityReadDto>>(severities);
+        //}
         public async Task<IEnumerable<SeverityReadDto>> GetSeverityByYearAndQuarter(string year, string quarter, int id)
         {
-            var severities = await _context.SeverityForAnalyses.Include(q=>q.SeverityCat)
-                .Where(s => s.Year == year && s.Quarter == quarter && s.SeverityCatId==id)
-                .ToListAsync();
+            int quarterValue = ConvertRomanToArabic(quarter);
+            List<SeverityReadDto> severities = new List<SeverityReadDto>();
+
+            for (int i = quarterValue; i >= 1; i--)
+            {
+                var presentQuarter = ConvertNumberToRoman(i);
+                var severityData = await _context.SeverityForAnalyses.Include(q => q.SeverityCat)
+                    .Where(s => s.Year == year && s.Quarter == presentQuarter && s.SeverityCatId == id)
+                    .ToListAsync();
+
+                if (severityData.Any())
+                {
+                    severities.AddRange(_mapper.Map<IEnumerable<SeverityReadDto>>(severityData));
+                    break;
+                }
+            }
 
             if (severities.Count == 0)
             {
                 throw new DataNotFoundException($"No severities found for year {year} and quarter {quarter}.");
             }
 
-            // var severityDetail = _mapper.Map<IEnumerable<SeverityReadDto>>(severities);
-            return _mapper.Map<IEnumerable<SeverityReadDto>>(severities);
+            return severities;
         }
 
 
@@ -122,6 +148,38 @@ namespace RiskAppetite.Services.SeverityService
 
             _context.SeverityForAnalyses.Remove(Severity);
             await _context.SaveChangesAsync();
+        }
+        public static int ConvertRomanToArabic(string Quarter)
+        {
+            switch (Quarter)
+            {
+                case "QI":
+                    return 1;
+                case "QII":
+                    return 2;
+                case "QIII":
+                    return 3;
+                case "QIV":
+                    return 4;
+                default:
+                    return -1;
+            }
+        }
+        public static string ConvertNumberToRoman(int Quarter)
+        {
+            switch (Quarter)
+            {
+                case 1:
+                    return "QI";
+                case 2:
+                    return "QII";
+                case 3:
+                    return "QIII";
+                case 4:
+                    return "QIV";
+                default:
+                    return null;
+            }
         }
     }
 }
